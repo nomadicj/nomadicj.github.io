@@ -1,6 +1,6 @@
 ---
 title:  "What? How? Why? When? | Three key questions to understanding software delivery responsibilities"
-date:   2019-01-08 21:00:00
+date:   2022-11-22 21:00:00
 categories: [ops]
 tags: []
 ---
