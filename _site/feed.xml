@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>nomadic blogging</title>
+    <description>Nomadic Blog; Just another techie learning, applying and sharing.</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Wed, 23 Nov 2022 16:35:08 -0800</pubDate>
+    <lastBuildDate>Wed, 23 Nov 2022 16:35:08 -0800</lastBuildDate>
+    <generator>Jekyll v3.6.2</generator>
+    
+      <item>
+        <title>Help! My AWS Bill Is Out Of Control!</title>
+        <description>&lt;h2 id=&quot;help-my-aws-bill-is-out-of-control&quot;&gt;Help! My AWS Bill Is Out Of Control&lt;/h2&gt;
+
+&lt;h3 id=&quot;the-clouds-a-free-to-use-service&quot;&gt;The Cloud’s a “Free To Use” Service&lt;/h3&gt;
+
+&lt;p&gt;When working with clients we often find that they’ve bought into the “The Cloud is just Cheaper” mythology. Please don’t misquote me on this. It is true. When engineerd for cost, cloud native solutions can be incredibly cheap given &lt;em&gt;just&lt;/em&gt; the right sweet spot. Apps that preciously would have taken tens or hundreds of thousands of dollars in servers, storage arrays, networking gear, rack space, bandwidth and all the auxillary stuff, can be done with a few lambdas, an S3 bucket or two and a nice cheap license free Aurora instance.&lt;/p&gt;
+
+&lt;p&gt;This blog post is not about those people.&lt;/p&gt;
+
+&lt;p&gt;This blog post is about people who start wholesale moving old school applications to Cloud IaaS providers and are surprised how quickly a few engineers can rack up some pretty serious bills.&lt;/p&gt;
+
+&lt;p&gt;Questioning your decision to go to AWS/GCP/Azure in the first place? Lets take a breather and plan out how to get control of this.&lt;/p&gt;
+
+&lt;h3 id=&quot;cost-ownership&quot;&gt;Cost Ownership&lt;/h3&gt;
+
+&lt;p&gt;It turns out that when people don’t have any relationship between the resource they are using and the own personal experience of the world around them, they can be a little careless with that resource. Whether it be my daughter and those surprisingly expensive hockey pucks of cheese wrapped in red waxy stuff or whether it’s someone polluting the hell out of the environment. If the feedback loop isn’t there, they just aren’t going to see the need to improve.&lt;/p&gt;
+
+&lt;h3 id=&quot;tagging&quot;&gt;Tagging&lt;/h3&gt;
+
+&lt;p&gt;When a company is working out where it’s money is going, everything is attributed to a department, a project or a product.&lt;/p&gt;
+
+&lt;h3 id=&quot;cost-ownership-1&quot;&gt;Cost Ownership&lt;/h3&gt;
+
+&lt;p&gt;When we’re building products for clients, no&lt;/p&gt;
+
+&lt;h3 id=&quot;enforcement&quot;&gt;Enforcement&lt;/h3&gt;
+
+&lt;h4 id=&quot;killer-process&quot;&gt;Killer Process&lt;/h4&gt;
+
+&lt;h4 id=&quot;enforce-creation-block&quot;&gt;Enforce Creation Block&lt;/h4&gt;
+</description>
+        <pubDate>Mon, 08 Apr 2019 14:00:00 -0700</pubDate>
+        <link>http://localhost:4000/2019/uncontrolled_aws_costs/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/uncontrolled_aws_costs/</guid>
+        
+        <category>tagging</category>
+        
+        <category>aws</category>
+        
+        <category>billing</category>
+        
+        <category>finance</category>
+        
+        <category>costs</category>
+        
+        
+        <category>engineering</category>
+        
+        <category>leadership</category>
+        
+        <category>aws</category>
+        
+        <category>billing</category>
+        
+        <category>culture</category>
+        
+      </item>
+    
+      <item>
+        <title>What? How? Why? When? | Three key questions to understanding software delivery responsibilities</title>
+        <description>&lt;p&gt;When we consider a software development team as a system, we have to understand the dynamics of pressures that are in play in order to understand ultimately how a teams performance will play out. It is true that a well aligned set of folks who are all part of a high functioning team will be able to holistically take care of all the concerns this approach proposes to solve, but this approach proposes to solve responsibilities and team dynamics for the other 99% of us.&lt;/p&gt;
+
+&lt;p&gt;When we have unclear responsibilities and expectations in any situation in life, misunderstandings occur, multiply and poor experiences result. In my experience, when responsibilities are left poorly defined typically either no-one takes a responsibility, leading to it being neglected and everyone being frustrated that “other people” aren’t pulling their weight. Or everyone takes ownership of the responsibility, which leads to disagreement, disengagement and ultimately no-one has clear accountability and therefore we have the same situation as if no-one had taken responsibility.&lt;/p&gt;
+
+&lt;p&gt;Said another way; We need a responsibility to be clearly associated with a role and for that role to be accountable for that responsibility.&lt;/p&gt;
+
+&lt;p&gt;Let us start by going through the responsibilities. To delivery something as a software team, surely we have to start with what we need to deliver, right?
+What? &lt;/p&gt;
+
+&lt;p&gt;What are we building? A solutions to a problem, obviously, but what is the solution. The answer as to how solve this question is actually the key to unlocking this concept. There is no one person who can define the “What?” answer and there are no two situations where the balance of responsibility around “What?” is the same. Let me walk you through my thoughts on the “How?” the “Why?” and the “When?” before we come back to the address this elephant in the room.
+Ok… How? &lt;/p&gt;
+
+&lt;p&gt;Anyone who has ever spent any time with Engineers, at least anyone who has known me as an Engineer, knows I/we love this question. White boards, architectural diagrams, activity diagrams. We can spend all day, week and month solving the how we could perfectly solve this problem at multiple levels of maturity and scale. The “How?” problem is very firmly the domain of the Engineer and we love it for that.
+Why??&lt;/p&gt;
+
+&lt;p&gt;This ones sounds a little odd until we realise that when building a solution we need to understand why the problem needs to be solved before we can get back to the “What?” of the solution. Why does the user need to be notified by our system? Why do they need a report? Why do they need whatever-other-functionality-we’re-going-to-build? Having a product person who can define and answer the “Why?” question is critical to be able to get to the solution of what we are going to be building.&lt;/p&gt;
+
+&lt;p&gt;So, Engineering does “How?” and Product does “Why?”. We’re good to get to the “What?” now right?&lt;/p&gt;
+
+&lt;p&gt;Nope.&lt;/p&gt;
+
+&lt;p&gt;While there are always going to be a bunch of other constraints like Operating Expense, [something] and [something], to keep this a sane and not a multi-dimensional problem that becomes too hard to draw simple diagrams around, I believe that the most critical question to address in the third dimension is “When?”
+When?!?!&lt;/p&gt;
+
+&lt;p&gt;Well, as soon as possible, of course, But not too soon, because if you ask Product to make it too soon with the scope they desire then we’ll have a poor quality product that’ll be expensive or even impossible to maintain. And don’t ask Engineering to make it too soon because then you’ll end up with a well architected and maintainable solution that… doesn’t really solve the client “Why?”&lt;/p&gt;
+
+&lt;p&gt;So asking either Product or Engineering to own the why will ultimately lead to compromise of the others criterion for success. Do we need someone else in the mix here?&lt;/p&gt;
+
+&lt;p&gt;Please allow me to introduce the concept of the TPM.
+WHAT???&lt;/p&gt;
+
+&lt;p&gt;Now we can address the answer of what it is that we are building given the scope and vision of Product in the why phase of definition, the technical constraints Engineering bring in the how phase and the timeline tracking brought to reality by TPM in then when phase. Now we have a definition of what it is that we are intending to build. &lt;/p&gt;
+
+&lt;p&gt;Well… assuming you’re working in an Agile world or something akin to it, you had a definition of what. But the world moves on and pretty soon you’ll be on a sprint boundary, time will have passed, we’ll have learned things and we’ll all be looking at those product scope constraints differently.&lt;/p&gt;
+
+&lt;p&gt;Time to evolve the plan, but at least we all understand what we’re responsible now, right?&lt;/p&gt;
+</description>
+        <pubDate>Tue, 08 Jan 2019 13:00:00 -0800</pubDate>
+        <link>http://localhost:4000/2019/What-How-Why-When-Three-key-questions-to-understanding-software-delivery-responsibilities/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/What-How-Why-When-Three-key-questions-to-understanding-software-delivery-responsibilities/</guid>
+        
+        
+        <category>ops</category>
+        
+      </item>
+    
+      <item>
+        <title>Using LetsEncrypt Ephemerally</title>
+        <description>&lt;h2 id=&quot;delivering-encrypted-static-websites-using-s3-cloudfront-and-letsencrypt&quot;&gt;Delivering encrypted static websites using S3, Cloudfront and LetsEncrypt&lt;/h2&gt;
+
+&lt;p&gt;LetsEncrypt is a great project launched in 2016 by, among others, Mozilla and the Electronic Frontier Foundation, to make TLS certs and therefore https encryption an accessible standard for all of us. Most of the documentation out there demonstrates how to use CertBot to create and maintain certs on static webservers, but with modern single page apps and other static content that no longer needs Apache, Nginx and their like, why pay to run a server when you can deliver the same content for pennies? I built this blog using just these technologies, but the LetsEncrypt was a touch more in depth than I initially suspected it would be. Lets dig into that.&lt;/p&gt;
+
+&lt;h3 id=&quot;letsencrypt-acme-and-certbot&quot;&gt;LetsEncrypt, ACME and Certbot&lt;/h3&gt;
+
+&lt;p&gt;The LetsEncrypt service presents a Restful API which clients can use a challenge-response protocol call Automated Certificate Management Environment (ACME) to obtain and renew certificates. As part of that, number of of state files are created that are subsequently used to renew certificates. Great, but how can I use that when I’m not maintaining a server upon which that would reside? We should probably maintain that somewhere.&lt;/p&gt;
+
+&lt;h3 id=&quot;s3-the-filestore-for-the-serverless&quot;&gt;S3; the filestore for the serverless&lt;/h3&gt;
+
+&lt;p&gt;Using S3 as a filestore is a great way of persisting files without maintaining an actual file system. Seeing as we don’t have a persistent file system handy in our ephemeral state, that’s handy. In order to persist that state, we’ll need to write a little code (in this case shell), to pull and push the state as required.&lt;/p&gt;
+
+&lt;h3 id=&quot;letsencrypt-verification&quot;&gt;LetsEncrypt Verification&lt;/h3&gt;
+
+&lt;p&gt;Allowing anyone to create certs for any domain would probably be a bad thing. Therefore LetsEncrypt forces you to do some proof of ownership work. In this case, we will be using the AWS Route53 plugin to use the actual DNS entry for the URL in question to prove ownership. We’ll also need to create an IAM profile and role to allow a user to securely to that.&lt;/p&gt;
+
+&lt;h3 id=&quot;s3---cloudfront&quot;&gt;S3 -&amp;gt; CloudFront&lt;/h3&gt;
+
+&lt;p&gt;Hosting static content in S3 using the ‘website’ function it offers sounds great, but S3 doesn’t actually allow you to use your own SSL certs to create an HTTPS endpoint. Fortunately, CloudFront (the AWS CDN), does. Once we have configured that, we just need to get it to use the new cert.&lt;/p&gt;
+
+&lt;p&gt;So to recap,
+LetsEncrypt Cert -&amp;gt; CloudFront &amp;lt;- S3 &amp;lt;- Static Content
+Cert state -&amp;gt; S3&lt;/p&gt;
+
+&lt;p&gt;Just to host a static website? I thought this was supposed to be easy?&lt;/p&gt;
+</description>
+        <pubDate>Wed, 02 Jan 2019 13:00:00 -0800</pubDate>
+        <link>http://localhost:4000/2019/letsencrypt-container/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/letsencrypt-container/</guid>
+        
+        <category>letsencrypt</category>
+        
+        <category>s3</category>
+        
+        <category>cloudfront</category>
+        
+        <category>tls</category>
+        
+        <category>ssl</category>
+        
+        <category>https</category>
+        
+        <category>route53</category>
+        
+        <category>certbot</category>
+        
+        <category>circleci</category>
+        
+        <category>docker</category>
+        
+        <category>containers</category>
+        
+        
+        <category>ops</category>
+        
+      </item>
+    
+  </channel>
+</rss>
