@@ -1,7 +1,7 @@
 # Site settings
-title: nomadic blogging
-description: 'Nomadic Blog; Just another techie learning, applying and sharing.'
-url: 'https://armstro.ca'
+title: tech leadership blog
+description: 'Just another techie learning, applying and sharing.'
+url: 'https://www.armstro.ca'
 baseurl: ''
 google_analytics: 'G-H8H411F9KG'
 # disqus_shortname: 'your-disqus-name'
