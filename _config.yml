@@ -3,7 +3,7 @@ title: nomadic blogging
 description: 'Nomadic Blog; Just another techie learning, applying and sharing.'
 url: 'https://armstro.ca'
 baseurl: ''
-# google_analytics: 'UA-XXXXXX-X'
+google_analytics: 'G-H8H411F9KG'
 # disqus_shortname: 'your-disqus-name'
 
 author:
