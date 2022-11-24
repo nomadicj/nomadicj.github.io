@@ -3,10 +3,10 @@
   <channel>
     <title>nomadic blogging</title>
     <description>Nomadic Blog; Just another techie learning, applying and sharing.</description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 23 Nov 2022 17:20:05 -0800</pubDate>
-    <lastBuildDate>Wed, 23 Nov 2022 17:20:05 -0800</lastBuildDate>
+    <link>https://armstro.ca/</link>
+    <atom:link href="https://armstro.ca/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Wed, 23 Nov 2022 17:30:00 -0800</pubDate>
+    <lastBuildDate>Wed, 23 Nov 2022 17:30:00 -0800</lastBuildDate>
     <generator>Jekyll v3.6.2</generator>
     
       <item>
@@ -49,8 +49,8 @@ WHAT???&lt;/p&gt;
 &lt;p&gt;Time to evolve the plan, but at least we all understand what we’re responsible now, right?&lt;/p&gt;
 </description>
         <pubDate>Tue, 22 Nov 2022 13:00:00 -0800</pubDate>
-        <link>http://localhost:4000/2022/What-How-Why-When-Three-key-questions-to-understanding-software-delivery-responsibilities/</link>
-        <guid isPermaLink="true">http://localhost:4000/2022/What-How-Why-When-Three-key-questions-to-understanding-software-delivery-responsibilities/</guid>
+        <link>https://armstro.ca/2022/What-How-Why-When-Three-key-questions-to-understanding-software-delivery-responsibilities/</link>
+        <guid isPermaLink="true">https://armstro.ca/2022/What-How-Why-When-Three-key-questions-to-understanding-software-delivery-responsibilities/</guid>
         
         
         <category>ops</category>
@@ -90,8 +90,8 @@ WHAT???&lt;/p&gt;
 &lt;h4 id=&quot;enforce-creation-block&quot;&gt;Enforce Creation Block&lt;/h4&gt;
 </description>
         <pubDate>Mon, 08 Apr 2019 14:00:00 -0700</pubDate>
-        <link>http://localhost:4000/2019/uncontrolled_aws_costs/</link>
-        <guid isPermaLink="true">http://localhost:4000/2019/uncontrolled_aws_costs/</guid>
+        <link>https://armstro.ca/2019/uncontrolled_aws_costs/</link>
+        <guid isPermaLink="true">https://armstro.ca/2019/uncontrolled_aws_costs/</guid>
         
         <category>tagging</category>
         
@@ -145,8 +145,8 @@ Cert state -&amp;gt; S3&lt;/p&gt;
 &lt;p&gt;Just to host a static website? I thought this was supposed to be easy?&lt;/p&gt;
 </description>
         <pubDate>Wed, 02 Jan 2019 13:00:00 -0800</pubDate>
-        <link>http://localhost:4000/2019/letsencrypt-container/</link>
-        <guid isPermaLink="true">http://localhost:4000/2019/letsencrypt-container/</guid>
+        <link>https://armstro.ca/2019/letsencrypt-container/</link>
+        <guid isPermaLink="true">https://armstro.ca/2019/letsencrypt-container/</guid>
         
         <category>letsencrypt</category>
         
