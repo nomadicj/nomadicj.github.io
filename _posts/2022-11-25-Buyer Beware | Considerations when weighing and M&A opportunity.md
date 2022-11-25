@@ -9,9 +9,9 @@ tags: []
 {:toc}
 
 ## Aquisition Motivations
-When weighing the aquisition of another organisation, whatever the terms of the deal, we need to be cognicent of the motivating factors for the deal when weighing the technology and engineering behind the target company. Here are a simplistic few to consider:
+When weighing the acquisition of another organisation, whatever the terms of the deal, we need to be cognisant of the motivating factors for the deal when weighing the technology and engineering behind the target company. Here are a simplistic few to consider:
 
-### Aquihire?
+### Acquihire?
     
 The product and client base are not important. What you're looking to buy is a team who have a certain skill set. In this case focus most of your effort on making sure that team is rock solid and that you have a great deal in place for them as individuals.
     
@@ -33,11 +33,11 @@ What is the makeup of the team? Are the mostly senior folks delivering some of t
 
 ### people debt
 
-What did the team look like 3 months ago? 6 months ago? 9 months ago? A chief concern when examining how effective a dev team has evolved over time. A distressed organisation can do interesting things in order to manage cash flow and stay afloat while looking to be aquiried. If the team compision has shifted significantly in the last while, 
+What did the team look like 3 months ago? 6 months ago? 9 months ago? A chief concern when examining how effective a dev team has evolved over time. A distressed organisation can do interesting things in order to manage cash flow and stay afloat while looking to be acquired. If the team composition has shifted significantly in the last while, 
 
 ### staff disaffection
 
-However awesome you think your company is, it is not the company that the aquired staff joined and have been part of for the last while. Your fight is not their fight and unless you can and until you do create a collective view of the world, it never will be. This is something key to understand otherwise you will potentially spend a lot of money and time on this M&A and the a key component of it, the IP in their heads, will walk out of the door.
+However awesome you think your company is, it is not the company that the acquired staff joined and have been part of for the last while. Your fight is not their fight and unless you can and until you do create a collective view of the world, it never will be. This is something key to understand otherwise you will potentially spend a lot of money and time on this M&A and the a key component of it, the IP in their heads, will walk out of the door.
 
 ## Dependencies
 
@@ -61,7 +61,7 @@ A leading indicator to product maturity is a teams approach to [Continuious Inte
 
 ### Production Access
 
-Who has access to production data? The amount to which you need to care about will likely depend on what is in that dataset, but if you have PII or PHI a set of production databases that a wide variety of people have access to because no-one has gotten to locking access down yet, that's a concern. If lack of maturity is uncovered, I'd encourage you to consider why that access is required? Did they just not get around to locking down yet but it'll be simple enough to do or are there fundamental company processes that need to happen that need this level of broad undiscriminate access?
+Who has access to production data? The amount to which you need to care about will likely depend on what is in that dataset, but if you have PII or PHI a set of production databases that a wide variety of people have access to because no-one has gotten to locking access down yet, that's a concern. If lack of maturity is uncovered, I'd encourage you to consider why that access is required? Did they just not get around to locking down yet but it'll be simple enough to do or are there fundamental company processes that need to happen that need this level of broad indiscriminate access?
 
 ### DORA metrics
 
@@ -75,6 +75,7 @@ While it is unlikely that you have the time or the willing to go through a full 
 
 ## Integration Planning
 
+The value of the acquired company/product 
 ### Immediate
 
 ### 90 days
