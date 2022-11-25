@@ -8,7 +8,7 @@ tags: []
 * TOC
 {:toc}
 
-## Aquisition Motivations
+## Acquisition Motivations
 When weighing the acquisition of another organisation, whatever the terms of the deal, we need to be cognisant of the motivating factors for the deal when weighing the technology and engineering behind the target company. Here are a simplistic few to consider:
 
 ### Acquihire?
@@ -23,29 +23,29 @@ The product and client base are not important. What you're looking to buy is a t
 
 The success of software companies are a product of two things; the code they have written to date and the knowledge workers who have created that product. 
 
-### location
+### Location
 
 Do you have any constraints on where people who work for your organisation can be located? Some industries and client bases are regulated and/or have contractual obligations set that will constrain where your staff are based. For example, if you are meant to be GDPR compliant, I would't recommend intending to have a bunch of devs in a non-compliant country  
 
-### team makeup
+### Team makeup
 
 What is the makeup of the team? Are the mostly senior folks delivering some of the best product of their lives? Or are they a few lead folks vastly outnumbered by fresh grads and interns? The make up and dynamic of the team is an important consideration when looking to understand what your expectations are going forward and how you should be crafting integration and retention plans.
 
-### people debt
+### People debt
 
 What did the team look like 3 months ago? 6 months ago? 9 months ago? A chief concern when examining how effective a dev team has evolved over time. A distressed organisation can do interesting things in order to manage cash flow and stay afloat while looking to be acquired. If the team composition has shifted significantly in the last while, 
 
-### staff disaffection
+### Staff disaffection
 
 However awesome you think your company is, it is not the company that the acquired staff joined and have been part of for the last while. Your fight is not their fight and unless you can and until you do create a collective view of the world, it never will be. This is something key to understand otherwise you will potentially spend a lot of money and time on this M&A and the a key component of it, the IP in their heads, will walk out of the door.
 
 ## Dependencies
 
-### interlectual property
+### Intellectual property
 
 Are there any parts of the code that the subject company does not own? Have they pulled from open source packages with licenses that are restrictive and that require you to constrain usage or or even dispose of entire components within the subject product? Startups can get scrappy and scrappy can include the term "we'll deal with that problem down the road". Passing that obligation onto you can seriously change the value of the proposition.
 
-### third party component usage
+### Third party component usage
 
 Finding the balance of using third party components to deliver value to market in the quickest time possible vs owning all your own IP and having the most profitable product down the line is a fact of life for startups. 
 
