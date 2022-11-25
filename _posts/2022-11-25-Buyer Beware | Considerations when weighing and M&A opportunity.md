@@ -75,7 +75,8 @@ While it is unlikely that you have the time or the willing to go through a full 
 
 ## Integration Planning
 
-The value of the acquired company/product 
+The value of the acquired company/product is related to your ability to integrate them. Do you intent to have them as a standalone organisation adjacent to your own? Do you intend to fully integrate their technology into your own stack? Or something in between? Understanding this is going to be key when planning the acquisition. Importantly I would suggest considering three major milestones:
+
 ### Immediate
 
 ### 90 days
