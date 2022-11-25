@@ -5,6 +5,9 @@ categories: []
 tags: []
 ---
 
+## Intro
+Industries and businesses have life cycles. Occasionally you will find yourself in a part of the economic or company cycle where Mergers and Acquisitions are attractive. As a technology leader you will be required to weigh in on the engineering and product operations capability of the target company. This guide is my rubric for considering them.
+
 * TOC
 {:toc}
 
