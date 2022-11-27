@@ -68,6 +68,10 @@ Understanding what is a product and what is a professional service with some sof
 
 ## Operational Maturity
 
+### Agile approach
+
+There is no "right" approach against which a development team should be judged, but the approach a team is taking can inform you of what it would be like to work with/integrate them.
+
 ### CICD
 
 A leading indicator to product maturity is a teams approach to [Continuious Integration and Continuious Delivery](https://about.gitlab.com/topics/ci-cd/). If a product is being deployed to production from someones laptop with, you might want to weigh that in light of the maturity expectation you have of that organisation and how the level of effort you expect to put into that codebase. 
