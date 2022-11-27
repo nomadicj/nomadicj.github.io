@@ -52,9 +52,19 @@ Are there any parts of the code that the subject company does not own? Have they
 
 Finding the balance of using third party components to deliver value to market in the quickest time possible vs owning all your own IP and having the most profitable product down the line is a fact of life for startups. 
 
-## Cloud Spend
+## Operating Expense
 
-### fd
+### Cloud spend
+
+When considering the operating expense profile of product, one approach would be to consider the cloud expense as a function of cents spent per dollar of revenue (preferably of recurring revenue). The fundamental question to be answered is "will this ever be a profitable venture?”. Digging in on whether current inefficiencies are just a function of maturity or if the product can never be profitable is key here. Don't judge too harshly. Startups are always a balancing act. Look for backlog to address the issue for intent.
+
+### Client support expense
+
+Client support can be a great sticky plaster for poor product. As with cloud expense, this isn’t a fatal issue but can be an indicator as to how mature the product offering is. Similar to Cloud spend, take a look at the ratio of CS expense to recurring revenue along with any backlog targeting efficiencies (and progress made on that backlog). Often this can be a “we’ll fix it when we have enough revenue” area that can end up being a massive millstone around a products neck as well as a sign the product really isn’t hitting the mark.
+
+### Professional services
+
+Understanding what is a product and what is a professional service with some software tooling is important. If an offering is only attractive and making sales when professional services is overlayed, you do not have a SaaS offering. Unless that is explicitly what you are buying, that’s not a show stopper, just know-what you are buying before you do and offer this for those who are pricing the value.
 
 ## Operational Maturity
 
