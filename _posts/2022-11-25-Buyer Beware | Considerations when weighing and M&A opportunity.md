@@ -2,7 +2,7 @@
 title:  "Buyer Beware | Considerations when weighing an M&A opportunity"
 date:   2022-11-25 12:00:00
 categories: []
-tags: []
+tags: [wip, draft, m&a]
 ---
 
 ## Intro
