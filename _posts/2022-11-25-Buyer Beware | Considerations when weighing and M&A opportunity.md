@@ -6,7 +6,7 @@ tags: [wip, draft, m&a]
 ---
 
 ## Intro
-As an engineering leader you will occasionally be asked to Industries and businesses have life cycles. Occasionally you will find yourself in a part of the economic or company cycle where Mergers and Acquisitions are attractive. As a technology leader you will be required to weigh in on the engineering and product operations capability of the target company. This guide is my rubric for considering them.
+As an engineering leader you will occasionally be asked to take a look at a merger or acquisition opportunity. Industries and businesses have cycles of consolidation and occasionally you will find yourself in a part of the economic or company cycle where Mergers and Acquisitions are attractive. As a technology leader you will be required to weigh in on the engineering and product operations capability of the target company. This guide is my rubric for considering them.
 
 * TOC
 {:toc}
