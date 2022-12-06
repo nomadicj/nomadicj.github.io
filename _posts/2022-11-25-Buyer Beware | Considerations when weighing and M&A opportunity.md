@@ -94,6 +94,8 @@ While it is unlikely that you have the time or the willing to go through a full 
 
 ### Tech Debt
 
+### Third Party Dependency
+
 ### Backlog Depth
 
 ### Sold Commitments
