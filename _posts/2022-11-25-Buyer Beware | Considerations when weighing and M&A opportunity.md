@@ -94,6 +94,7 @@ Skirting the boundary between engineering and product concerns, the following fe
 
 ### Tech Debt
 
+
 ### Third Party Dependency
 
 ### Backlog Depth
@@ -101,7 +102,6 @@ Skirting the boundary between engineering and product concerns, the following fe
 ### Sold Commitments
 
 ## Integration Planning
-
 The value of the acquired company/product is related to your ability to integrate them. Do you intent to have them as a standalone organisation adjacent to your own? Do you intend to fully integrate their technology into your own stack? Or something in between? Understanding this is going to be key when planning the acquisition. Importantly I would suggest considering three major milestones:
 
 ### Immediate
