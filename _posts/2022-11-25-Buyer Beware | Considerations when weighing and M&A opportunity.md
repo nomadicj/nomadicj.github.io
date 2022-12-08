@@ -29,7 +29,7 @@ The product being considered would be a great augmentation for your current prod
 The success of software companies are a product of two things; the code they have written to date and the knowledge workers who have created that product. 
 
 ### Location
-Do you have any constraints on where people who work for your organisation can be located? Some industries and client bases are regulated and/or have contractual obligations set that will constrain where your staff are based. For example, if you are meant to be GDPR compliant, I would't recommend intending to have a bunch of devs in a non-compliant country  
+Do you have any constraints on where people who work for your organisation can be located? Some industries and client bases are regulated and/or have contractual obligations set that will constrain where your staff are based. For example, if you are meant to be GDPR compliant, I would't recommend intending to have a bunch of devs in a non-compliant country. Even is this isn't a compliance concern, ensuring a team is able to collaborate and function with the rest of the organisation largely depends on timezone compatibility. Having one part of the group in San Francisco, California and another in Stockholm, Sweden, is not going to be an easy recipe for success.
 
 ### Team makeup
 What is the makeup of the team? Are the mostly senior folks delivering some of the best product of their lives? Or are they a few lead folks vastly outnumbered by fresh grads and interns? The make up and dynamic of the team is an important consideration when looking to understand what your expectations are going forward and how you should be crafting integration and retention plans.
