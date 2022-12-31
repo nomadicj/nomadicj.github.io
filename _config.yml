@@ -8,7 +8,7 @@ google_analytics: 'G-H8H411F9KG'
 
 author:
   name: 'James Armstrong'
-  email: j@armstro.ca
+  # email: j@armstro.ca
   github_username: nomadicj
   linkedin_username: jnarmstrong
   stackshare_username: nomadicj
@@ -31,7 +31,7 @@ highlighter: rouge
 collections:
   ideas:
     output: true
-    permalink: /
+    permalink: /:collection/:title
 
 sass:
     sass_dir: _sass
