@@ -6,7 +6,7 @@ tags: [wip, draft, m&a]
 ---
 
 ## Intro
-As an engineering leader you will occasionally be asked to take a look at a merger or acquisition opportunity. Industries and businesses have cycles of consolidation and occasionally you will find yourself asked to evaluate a Merger and/or an Acquisition. As a technology leader you will be required to weigh in on the engineering and product operations capability of the target company. This guide is my rubric, with contributions from colleagues current and past, for considering them. 
+As an engineering leader you will occasionally be asked to take a look at a merger or acquisition opportunity. Industries and businesses have cycles of consolidation and occasionally you will find yourself asked to evaluate a Merger and/or an Acquisition. As a the technology leader in the conversation you will be required to weigh in on the engineering and product operations capability of the target company. This guide is my rubric, with contributions from colleagues current and past, for considering them. 
 
 Thank you to all who have offered opinion and input to this. Please see it as a living document and comments/PRs are always welcome.
 
@@ -88,6 +88,9 @@ While it is unlikely that you have the time or the willing to go through a full 
 - What approach have you taken to/how complete is your Infrastructure as Code?
 - What approach have you taken to Disaster Recovery?
 - 
+
+## Product Architecture
+
 
 ## Product Quality
 Skirting the boundary between engineering and product concerns, the following few items 
