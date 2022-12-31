@@ -31,10 +31,7 @@ highlighter: rouge
 collections:
   ideas:
     output: true
-    permalink: /:collection/:name
-  posts:
-    output: true
-    permalink: /:collection/:name
+    permalink: /
 
 sass:
     sass_dir: _sass
