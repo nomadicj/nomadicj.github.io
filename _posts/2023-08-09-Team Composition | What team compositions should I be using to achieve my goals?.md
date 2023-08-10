@@ -4,7 +4,7 @@ date:   2023-08-09 21:00:00
 categories: [organisation structure]
 tags: []
 ---
-When leading and adapting an organisation to the changing challenges backlogs present it is important to consider team composition and what impact that has on its overall approach. These are the key types you need to consider and use as tools in your leadership toolkit.
+When leading and adapting an organisation to the changing challenges backlogs present it is important to consider team composition and what impact that has on its overall approach. These are the key types you need to consider and use as tools in your leadership toolkit.
 
 ## Strike Teams - The “get it done” team
 Occasionally you need a team to go and take on a defined task. Get a project done. Meet a deadline. On this team you need people who know what they are doing and, given direction, can make it happen. As such you should deploy a small team of highly skilled engineers who can hit the ground running with a minimum of fuss (trying to beat [Metcalfe’s Law](https://en.wikipedia.org/wiki/Metcalfe's_law) with both low node count and high prior experience)
@@ -24,7 +24,6 @@ Occasionally you need a team to go and take on a defined task. Get a project don
 More usually you will want a team that owns between one and three services, depending on the size, complexity and age of those services. 
 #### Composition (Total 6 - 10 members)
 - Senior to Staff level tech lead to support others in their break down of work and to pre-digest the challenges around the challenge
-- 
 #### Work Style
 - Scrum
 #### Pros
@@ -54,7 +53,7 @@ Sometimes a product or group of components needs to be put into “maintenance o
 - Senior to Staff level tech lead to support others in their break down of work and to pre-digest the challenges around the challenge
 - Often the rest of the group is largely junior members who are happy to learn their tradecraft in this kind of environment. 
 #### Work Style
-- Kanban as the issue list dictates
+- [Scrumban](https://www.agilealliance.org/scrumban/) as the issue list dictates
 #### Pros
 - Finding the right people to take on the maintenance role can be hard but if you have knowledgeable capable people who find this kind of work invigorating, embrace them and provide them with this opportunity.
 #### Cons
