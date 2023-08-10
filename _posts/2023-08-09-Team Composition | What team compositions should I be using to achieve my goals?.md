@@ -21,7 +21,7 @@ Occasionally you need a team to go and take on a defined task. Get a project don
 - As individuals who are knowledgable and capable, they will likely be comfortable challenging norms and breaking rules that others can’t. They will likely be seen as being separate from the rest of your engineering team. Therefore their deployment on any given project should be reasonably short to avoid building a toxic “us and them” mentality in the overall engineering group.
 
 ## Holistic Service Teams - The “own that service” team
-More usually you will want a team that owns between one and three services, depending on the size, complexity and age of those services. 
+More typically you will want a team that owns between one and three services, depending on the size, complexity and age of those services. This team will own a service performing all new feature development, maintenance and operational overhead of the services they have in their purview. 
 #### Composition (Total 6 - 10 members)
 - Senior to Staff level tech lead to support others in their break down of work and to pre-digest the challenges around the challenge
 #### Work Style
@@ -55,7 +55,7 @@ Sometimes a product or group of components needs to be put into “maintenance o
 #### Work Style
 - [Scrumban](https://www.agilealliance.org/scrumban/) as the issue list dictates
 #### Pros
-- Finding the right people to take on the maintenance role can be hard but if you have knowledgeable capable people who find this kind of work invigorating, embrace them and provide them with this opportunity.
+- Finding the right people to take on the maintenance role can be hard but if you have knowledgeable capable people who find this kind of work rewarding, embrace them and provide them with this opportunity.
 #### Cons
 - Attrition on this kind of team can be high. Your main challenge is creating a real sense of worth and value delivery for this group of people while presenting enough challenges to ensure they are feel personal career growth. 
 #### Variation
