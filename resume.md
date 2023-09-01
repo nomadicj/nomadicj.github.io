@@ -11,8 +11,14 @@ Vancouver, British Columbia, Canada
 Seasoned SaaS Engineering Leader with a reputation for building high performing teams to efficiently deliver reliable and scalable solutions. Leading a major surge effort to deliver a 50% YOY revenue growth while massively scaling Uplight's engineering team. Provides proactively conscious leadership for large teams and delivers exceptional outcomes, including managing 60,000,000 accounts with over $70,000,000 in sales. Excels in fast-paced and challenging environments.
 
 ## Experience
+### Armstrong Engineering
+August 2023 ongoing
+Vancouver, Canada
+Engaging if fractional engineering leadership and data development support for various clients. Work includes data analysis such as:
+- [Coffee Roaster Analysis](/roasters.html)
+
 ### MediaValet | Vice President of Engineering
-April 2022 - Present
+April 2022 - July 2023
 Vancouver, Canada
 
 Leading Engineering for MediaValet. Supporting 40% year-on-year revenue growth delivering global Digital Asset Management platform supporting 650+ organisations store, interact with and distribute their digital assets.
