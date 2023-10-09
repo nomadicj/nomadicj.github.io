@@ -16,7 +16,7 @@ August 2023 ongoing
 Vancouver, Canada
 Engaging if fractional engineering leadership and data development support for various clients. Work such as:
 - MediaValet SDK [GitHub](https://github.com/armstro-ca/mvsdk)/[PyPi](https://pypi.org/project/mvsdk/)
-- MediaValet CLI [GitHub]](https://github.com/armstro-ca/mvdam)
+- MediaValet CLI [GitHub](https://github.com/armstro-ca/mvdam)
 - [Coffee Roaster Analysis](/roasters.html)
 - [FlashAlerter](https://github.com/nomadicj/flashalerter)
 
