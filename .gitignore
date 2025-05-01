@@ -10,3 +10,4 @@ vendor/
 
 # Ignore mac files
 **/.DS_Store
+**/.claude/settings.local.json
