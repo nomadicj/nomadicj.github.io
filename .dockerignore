@@ -1,0 +1,6 @@
+.git
+.gitignore
+_site
+vendor/bundle
+.jekyll-cache
+.sass-cache
