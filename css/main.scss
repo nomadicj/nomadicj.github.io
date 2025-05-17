@@ -57,3 +57,43 @@ pre.highlight code,
   border: 3px solid #fff;
   border-radius:100%;
 }
+
+/* Special Interest Section */
+.special-interest {
+  padding: 0 20px;
+  max-width: 700px;
+  margin: 0 auto 20px;
+}
+
+.special-interest h2 {
+  font-size: 22px;
+  color: #e25440;
+  margin-bottom: 20px;
+}
+
+.special-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.special-list li {
+  margin-bottom: 15px;
+}
+
+.special-list a {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  text-decoration: none;
+}
+
+.special-list a:hover {
+  color: #e25440;
+}
+
+.special-description {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #666;
+}
