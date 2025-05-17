@@ -13,8 +13,6 @@ tags:
 - translation
 ---
 
-# British Idioms for Americans: A Translation Guide
-
 _Two countries separated by a common language._ - George Bernard Shaw
 
 A comprehensive glossary of British expressions, slang, and idioms that might confuse Americans, organized alphabetically for easy reference.
