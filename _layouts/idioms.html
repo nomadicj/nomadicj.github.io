@@ -1,0 +1,108 @@
+---
+layout: default
+---
+<article class="post-container post-container--single">
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+  </header>
+
+  <div class="idioms-container">
+    <div class="idioms-index">
+      <ul>
+        <li><a href="#a">A</a></li>
+        <li><a href="#b">B</a></li>
+        <li><a href="#c">C</a></li>
+        <li><a href="#d">D</a></li>
+        <li><a href="#e">E</a></li>
+        <li><a href="#f">F</a></li>
+        <li><a href="#g">G</a></li>
+        <li><a href="#h">H</a></li>
+        <li><a href="#i">I</a></li>
+        <li><a href="#j">J</a></li>
+        <li><a href="#k">K</a></li>
+        <li><a href="#l">L</a></li>
+        <li><a href="#m">M</a></li>
+        <li><a href="#n">N</a></li>
+        <li><a href="#o">O</a></li>
+        <li><a href="#p">P</a></li>
+        <li><a href="#q">Q</a></li>
+        <li><a href="#r">R</a></li>
+        <li><a href="#s">S</a></li>
+        <li><a href="#t">T</a></li>
+        <li><a href="#u">U</a></li>
+        <li><a href="#v">V</a></li>
+        <li><a href="#w">W</a></li>
+        <li><a href="#y">Y</a></li>
+        <li><a href="#z">Z</a></li>
+        <li><a href="#false-friends">False Friends</a></li>
+      </ul>
+    </div>
+    <section class="post idioms-content">
+      {{ content }}
+    </section>
+  </div>
+
+</article>
+
+<style>
+  .idioms-container {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+  }
+  
+  .idioms-index {
+    position: sticky;
+    top: 30px;
+    align-self: flex-start;
+    width: 50px;
+    border-right: 1px solid #ddd;
+    padding-right: 15px;
+  }
+  
+  .idioms-index ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .idioms-index li {
+    margin-bottom: 5px;
+  }
+  
+  .idioms-index a {
+    display: block;
+    text-decoration: none;
+    color: #666;
+  }
+  
+  .idioms-index a:hover {
+    color: #e25440;
+  }
+  
+  .idioms-content {
+    flex: 1;
+  }
+  
+  @media (max-width: 768px) {
+    .idioms-container {
+      flex-direction: column;
+    }
+    
+    .idioms-index {
+      position: relative;
+      top: 0;
+      width: 100%;
+      border-right: none;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 15px;
+      margin-bottom: 20px;
+    }
+    
+    .idioms-index ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+  }
+</style>

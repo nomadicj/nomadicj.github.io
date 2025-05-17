@@ -1,5 +1,5 @@
 ---
-layout: "page"
+layout: "idioms"
 title: "British Idioms for Americans: A Translation Guide"
 date: 2025-05-16 10:00:00
 permalink: /british-idioms/
@@ -17,29 +17,6 @@ tags:
 _Two countries separated by a common language._ - George Bernard Shaw
 
 A comprehensive glossary of British expressions, slang, and idioms that might confuse Americans, organized alphabetically for easy reference.
-
-## Contents
-
-### A-D
-[A](#a) • [B](#b) • [C](#c) • [D](#d)
-
-### E-H
-[E](#e) • [F](#f) • [G](#g) • [H](#h)
-
-### I-L
-[I](#i) • [J](#j) • [K](#k) • [L](#l)
-
-### M-P
-[M](#m) • [N](#n) • [O](#o) • [P](#p)
-
-### Q-T
-[Q](#q) • [R](#r) • [S](#s) • [T](#t)
-
-### U-Z
-[U](#u) • [V](#v) • [W](#w) • [Y](#y) • [Z](#z)
-
-### Special Sections
-[False Friends](#false-friends) - Same words, different meanings!
 
 ## A
 

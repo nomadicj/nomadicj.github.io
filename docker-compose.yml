@@ -1,9 +1,9 @@
 services:
   jekyll:
-    image: docker.io/arm64v8/ruby:2.7
+    image: arm64v8/ruby:3.0
     command: >
       bash -c "
-        gem install bundler:2.1.4 &&
+        gem install bundler jekyll &&
         bundle install &&
         bundle exec jekyll serve --host 0.0.0.0 --watch"
     ports:
