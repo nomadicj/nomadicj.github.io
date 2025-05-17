@@ -1,18 +1,31 @@
 ---
 layout: "page"
 title:  "James Armstrong | Seasoned SaaS Engineering Leader"
-date:   2022-11-01 12:00:00
+date:   2025-05-16 12:00:00
 categories: []
 tags: []
 ---
 
 Vancouver, British Columbia, Canada
 
-Seasoned SaaS Engineering Leader with a reputation for building high performing teams to efficiently deliver reliable and scalable solutions. Leading a major surge effort to deliver a 50% YOY revenue growth while massively scaling Uplight's engineering team. Provides proactively conscious leadership for large teams and delivers exceptional outcomes, including managing 60,000,000 accounts with over $70,000,000 in sales. Excels in fast-paced and challenging environments.
+Seasoned SaaS Engineering Leader with a reputation for building high performing teams to efficiently deliver reliable and scalable solutions. Creating cloud-first engineering approaches that balance velocity with reliability and scale. Provides proactively conscious leadership for large teams and delivers exceptional outcomes, including managing 60,000,000 accounts with over $70,000,000 in sales. Excels in fast-paced and challenging environments.
 
 ## Experience
+
+### HubSpot | Engineering Group Lead
+November 2024 - Present
+Vancouver, Canada & Boston, USA
+
+Leading engineering teams focused on HubSpot's core platform and service offerings.
+
+### Cacheflow (acquired by HubSpot) | Head of Engineering 
+November 2023 - November 2024
+Vancouver, Canada & San Francisco, USA
+
+Led the engineering organization for Cacheflow, a fintech startup building a Quote-to-Cash platform for B2B SaaS companies.
+
 ### Armstrong Engineering
-August 2023 ongoing
+August 2023 - November 2023
 Vancouver, Canada
 Engaging if fractional engineering leadership and data development support for various clients. Work such as:
 - MediaValet SDK [GitHub](https://github.com/armstro-ca/mvsdk)/[PyPi](https://pypi.org/project/mvsdk/)
