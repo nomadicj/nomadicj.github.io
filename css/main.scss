@@ -97,3 +97,14 @@ pre.highlight code,
   font-size: 14px;
   color: #666;
 }
+
+/* Custom button styling for British Idioms */
+.idioms-button {
+  background-color: rgba(226, 84, 64, 0.8) !important;
+  color: #fff !important;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.idioms-button:hover {
+  background-color: rgba(226, 84, 64, 1) !important;
+}
