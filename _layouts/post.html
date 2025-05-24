@@ -21,6 +21,20 @@ layout: default
   <section class="post">
     {{ content }}
   </section>
+  
+  {% if page.history and page.history.size > 0 %}
+  <section class="post-history">
+    <h3>Article History</h3>
+    <ul class="history-list">
+      {% for entry in page.history %}
+      <li class="history-entry">
+        <time class="history-date">{{ entry.date }}</time>
+        <span class="history-change">{{ entry.change }}</span>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
   {% if page.comments != false and site.disqus_shortname %}<section id="disqus_thread"></section><!-- /#disqus_thread -->{% endif %}
 </article>
 {% if page.comments != false %}{% include disqus.html %}{% endif %}

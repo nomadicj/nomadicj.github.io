@@ -108,3 +108,40 @@ pre.highlight code,
 .idioms-button:hover {
   background-color: rgba(226, 84, 64, 1) !important;
 }
+
+/* Article History Section */
+.post-history {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.post-history h3 {
+  color: #e25440;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.history-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.history-entry {
+  margin-bottom: 10px;
+  padding: 8px 0;
+  font-size: 14px;
+}
+
+.history-date {
+  color: #666;
+  font-weight: 600;
+  margin-right: 15px;
+  display: inline-block;
+  min-width: 100px;
+}
+
+.history-change {
+  color: #333;
+}

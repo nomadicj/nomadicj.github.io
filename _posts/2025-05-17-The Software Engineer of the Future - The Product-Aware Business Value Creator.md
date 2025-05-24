@@ -5,6 +5,9 @@ date: 2025-05-17 12:00:00
 categories: [engineering, product, career, business]
 tags: [software engineering, product management, business value, career development, technical leadership]
 description: "In an age when code itself is no longer gatekept, the future belongs to engineers who can bridge technical excellence with business understanding, creating solutions that are both well-crafted and meaningful."
+history:
+  - date: "2025-05-17"
+    change: "Initial publication"
 ---
 
 In an age when any wannabe startup CEO or even your friendly salesperson is vibe-coding a random business process into a cringy new SaaS app that they think is going to change the world, crafting code itself is not the gatekept domain held by those with the Keanu-like ability to read the matrix.
