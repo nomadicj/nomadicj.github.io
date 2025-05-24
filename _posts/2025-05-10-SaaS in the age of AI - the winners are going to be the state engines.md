@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "SaaS in the age of AI: the winners are going to be the state engines"
-date: 2025-05-23 12:00:00
+date: 2025-05-10 12:00:00
 categories: [technology, saas, ai, strategy]
 tags: [ai, saas, data, state management, competitive advantage]
 description: "In an age of AI-driven interfaces and agentic interaction models, the companies that will thrive are those that control the core state and data that underpins everything else."
@@ -76,3 +76,5 @@ The interface you're building today might be obsoleted by AI tomorrow. But the s
 The winners in the age of AI won't be the companies with the best chatbots or the most polished interfaces. They'll be the companies that became the authoritative source of truth for their domain's state. They'll be the state engines that everything else connects to.
 
 And in a world where everything can generate interfaces, being the source of truth is the ultimate moat.
+
+*Co-authored with AI*
