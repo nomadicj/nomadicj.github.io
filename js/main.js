@@ -4,6 +4,36 @@ sitemap:
   exclude: 'yes'
 ---
 
+// Dark Mode Functions
+function toggleDarkMode() {
+  const currentTheme = document.documentElement.getAttribute('data-theme');
+  const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+  
+  document.documentElement.setAttribute('data-theme', newTheme);
+  localStorage.setItem('theme', newTheme);
+  
+  // Update toggle icon
+  const toggleIcon = document.querySelector('.toggle-icon');
+  toggleIcon.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+}
+
+// Initialize theme on page load
+function initializeTheme() {
+  const savedTheme = localStorage.getItem('theme') || 
+    (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  
+  document.documentElement.setAttribute('data-theme', savedTheme);
+  
+  // Update toggle icon
+  const toggleIcon = document.querySelector('.toggle-icon');
+  if (toggleIcon) {
+    toggleIcon.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
+  }
+}
+
+// Initialize theme immediately (before DOM ready)
+initializeTheme();
+
 $(document).ready(function () {
   $('a.blog-button').click(function (e) {
     if ($('.panel-cover').hasClass('panel-cover--collapsed')) return

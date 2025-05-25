@@ -4,6 +4,150 @@
 @import "tables";
 @import "monokai";
 
+/* Dark Mode Variables */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --panel-bg: rgba(34, 34, 34, 0.6);
+  --border-color: #e1e8ed;
+  --link-color: #e25440;
+  --nav-bg: rgba(255, 255, 255, 0.98);
+  --content-bg: #ffffff;
+  --code-bg: #f8f8f8;
+  --highlight-bg: #fffbdd;
+}
+
+[data-theme="dark"] {
+  --bg-color: #1a1a1a;
+  --text-color: #e0e0e0;
+  --panel-bg: rgba(0, 0, 0, 0.8);
+  --border-color: #333333;
+  --link-color: #ff6b5a;
+  --nav-bg: rgba(26, 26, 26, 0.98);
+  --content-bg: #1a1a1a;
+  --code-bg: #2d2d2d;
+  --highlight-bg: #3a3a3a;
+}
+
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  background: var(--content-bg);
+  border: 2px solid var(--border-color);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode-toggle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Apply dark mode styles */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.panel-cover {
+  background-color: var(--panel-bg) !important;
+}
+
+.content-wrapper {
+  background-color: var(--content-bg);
+}
+
+.post-container, .main-post-list {
+  background-color: var(--content-bg);
+  color: var(--text-color);
+}
+
+.navigation {
+  background-color: var(--nav-bg);
+}
+
+.post-list__post-title a,
+.post-title a {
+  color: var(--text-color);
+}
+
+.post-list__post-title a:hover,
+.post-title a:hover {
+  color: var(--link-color);
+}
+
+/* Code blocks in dark mode */
+[data-theme="dark"] pre,
+[data-theme="dark"] code {
+  background-color: var(--code-bg);
+  color: #e0e0e0;
+}
+
+[data-theme="dark"] .highlight {
+  background-color: var(--highlight-bg);
+}
+
+/* Dark mode specific improvements */
+[data-theme="dark"] .post-list__divider {
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .footer {
+  background-color: var(--content-bg);
+  color: var(--text-color);
+}
+
+[data-theme="dark"] .categories a,
+[data-theme="dark"] .tags a {
+  border-color: var(--link-color);
+  color: var(--link-color);
+}
+
+[data-theme="dark"] .excerpt {
+  color: #b0b0b0;
+}
+
+[data-theme="dark"] .post-meta {
+  color: #888888;
+}
+
+/* Ideas page dark mode styles */
+[data-theme="dark"] .ideas-feed {
+  background-color: var(--content-bg);
+}
+
+[data-theme="dark"] .idea-post {
+  border-color: var(--border-color);
+  background-color: var(--content-bg);
+}
+
+[data-theme="dark"] .thread-part {
+  background-color: var(--code-bg);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .thread-part-number {
+  background-color: var(--link-color);
+  color: white;
+}
+
+/* Ensure toggle visibility on all backgrounds */
+.dark-mode-toggle {
+  backdrop-filter: blur(10px);
+}
+
 /* Modifications */
 
 pre.highlight,
