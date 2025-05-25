@@ -50,34 +50,34 @@ These are valid concerns, but they create a false choice between collaboration a
 
 Clear accountability doesn't eliminate collaboration—it enables it. The key is distinguishing between **consultation** and **responsibility**.
 
-### Single Point of Accountability (SPA)
+### Directly Responsible Individual (DRI)
 
 Every significant decision and outcome needs exactly one person who is ultimately accountable. This doesn't mean they work alone—it means they are responsible for ensuring the right outcome happens.
 
-**What the SPA Owns:**
+**What the DRI Owns:**
 - Final decision-making authority
 - Outcome responsibility (success or failure)
 - Stakeholder communication about decisions
 - Resource allocation and prioritization
 - Timeline and quality commitments
 
-**What the SPA Doesn't Own:**
+**What the DRI Doesn't Own:**
 - All the work (they coordinate and delegate)
 - All the expertise (they consult and gather input)
 - Blame for systemic failures (they own their decisions, not uncontrollable factors)
 
 ### The Consultation vs. Consent Model
 
-**Consultation**: The SPA gathers input, considers perspectives, and makes informed decisions.
-**Consent**: The SPA makes decisions that others must actively agree with.
+**Consultation**: The DRI gathers input, considers perspectives, and makes informed decisions.
+**Consent**: The DRI makes decisions that others must actively agree with.
 
 Most organizations accidentally operate in consent mode, where any stakeholder can block decisions. This creates the "everyone is responsible" problem. Consultation mode preserves collaboration while maintaining clear accountability.
 
 ### Strong Opinions, Weakly Held—For Everyone
 
-Both the SPA and consultees have responsibilities:
+Both the DRI and consultees have responsibilities:
 
-**SPA Responsibilities:**
+**DRI Responsibilities:**
 - Seek diverse input before deciding
 - Explain the reasoning behind decisions
 - Own the consequences of choices made
@@ -93,14 +93,14 @@ Both the SPA and consultees have responsibilities:
 
 ### Assignment Clarity
 
-Every project, decision, and outcome needs a clearly identified SPA. This should be explicit, documented, and communicated to all stakeholders.
+Every project, decision, and outcome needs a clearly identified DRI. This should be explicit, documented, and communicated to all stakeholders.
 
 **Bad**: "The engineering team is responsible for the API redesign."
 **Good**: "Sarah is responsible for the API redesign, with input from the platform team and product requirements from Mike."
 
 ### Scope Definition
 
-Clear accountability requires clear scope. The SPA needs to understand exactly what they're accountable for and what falls outside their responsibility.
+Clear accountability requires clear scope. The DRI needs to understand exactly what they're accountable for and what falls outside their responsibility.
 
 **Timeline Boundaries**: Are you responsible for hitting the original deadline or the best achievable deadline given current constraints?
 **Quality Standards**: Are you responsible for zero bugs or for quality appropriate to the use case and timeline?
@@ -108,7 +108,7 @@ Clear accountability requires clear scope. The SPA needs to understand exactly w
 
 ### Escalation Paths
 
-When the SPA lacks authority to make necessary decisions or access required resources, clear escalation paths prevent accountability from becoming a trap.
+When the DRI lacks authority to make necessary decisions or access required resources, clear escalation paths prevent accountability from becoming a trap.
 
 **Authority Gaps**: What decisions require escalation to leadership?
 **Resource Constraints**: How are resource conflicts resolved?
@@ -130,7 +130,7 @@ Holding someone accountable for outcomes without giving them authority to make n
 
 ## Making It Work in Practice
 
-Start small. Pick one significant decision or project and experiment with clear accountability assignment. Make the SPA explicit, define their authority, and practice the consultation process.
+Start small. Pick one significant decision or project and experiment with clear accountability assignment. Make the DRI explicit, define their authority, and practice the consultation process.
 
 Measure outcomes. Does clear accountability lead to faster decisions? Better outcomes? Reduced conflict? Use data to refine your approach.
 
