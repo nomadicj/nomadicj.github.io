@@ -63,11 +63,154 @@ class BlueskyFetcher:
                     posts.append(item.post)
             
             print(f"✅ Fetched {len(posts)} posts")
-            return posts
+            
+            # Process posts to combine threads
+            processed_posts = self.combine_threads(posts)
+            print(f"✅ Processed into {len(processed_posts)} posts (threads combined)")
+            
+            return processed_posts
             
         except Exception as e:
             print(f"❌ Failed to fetch posts: {e}")
             return []
+    
+    def combine_threads(self, posts):
+        """Combine threaded posts into single coherent posts."""
+        thread_map = {}
+        standalone_posts = []
+        
+        # Build thread relationships
+        for post in posts:
+            post_text = getattr(post.record, 'text', '')
+            
+            # Check if this is a reply to another post
+            reply = getattr(post.record, 'reply', None)
+            if reply and hasattr(reply, 'parent'):
+                parent_uri = reply.parent.uri
+                
+                # Check if parent is from the same author (thread continuation)
+                try:
+                    # Extract the parent post ID and check if it's from our posts
+                    parent_in_our_posts = any(p.uri == parent_uri for p in posts)
+                    
+                    if parent_in_our_posts:
+                        # This is part of a thread
+                        if parent_uri not in thread_map:
+                            thread_map[parent_uri] = []
+                        thread_map[parent_uri].append(post)
+                    else:
+                        # Reply to someone else's post, treat as standalone
+                        standalone_posts.append(post)
+                except:
+                    # If we can't determine, treat as standalone
+                    standalone_posts.append(post)
+            else:
+                # Check if this post starts a thread by looking for common thread indicators
+                if self.is_thread_starter(post_text):
+                    # This might be a thread starter
+                    thread_followers = self.find_thread_followers(post, posts)
+                    if thread_followers:
+                        # Create a combined thread post
+                        combined_post = self.create_combined_thread_post(post, thread_followers)
+                        standalone_posts.append(combined_post)
+                        # Remove followers from further processing
+                        for follower in thread_followers:
+                            if follower in posts:
+                                posts.remove(follower)
+                    else:
+                        standalone_posts.append(post)
+                else:
+                    # Check if this is already processed as part of a thread
+                    if not any(post in followers for followers in thread_map.values()):
+                        standalone_posts.append(post)
+        
+        # Process thread_map to create combined posts
+        for parent_uri, replies in thread_map.items():
+            # Find the parent post
+            parent_post = next((p for p in posts if p.uri == parent_uri), None)
+            if parent_post:
+                combined_post = self.create_combined_thread_post(parent_post, replies)
+                standalone_posts.append(combined_post)
+        
+        return standalone_posts
+    
+    def is_thread_starter(self, text):
+        """Check if a post looks like it starts a thread."""
+        thread_indicators = [
+            '🧵', 'thread', '1/', '1 of', '1|', 'part 1',
+            'continued below', 'more in replies', '👇'
+        ]
+        text_lower = text.lower()
+        return any(indicator in text_lower for indicator in thread_indicators)
+    
+    def find_thread_followers(self, starter_post, all_posts):
+        """Find posts that follow the starter post in a thread."""
+        followers = []
+        starter_time = starter_post.record.created_at
+        
+        # Look for posts that reply to the starter or mention thread continuation
+        for post in all_posts:
+            if post.uri == starter_post.uri:
+                continue
+                
+            # Check if it's a reply to the starter
+            reply = getattr(post.record, 'reply', None)
+            if reply and hasattr(reply, 'parent') and reply.parent.uri == starter_post.uri:
+                followers.append(post)
+                continue
+            
+            # Check for thread numbering patterns in posts after the starter
+            post_time = post.record.created_at
+            if post_time > starter_time:  # Posted after starter
+                text = getattr(post.record, 'text', '').lower()
+                if any(pattern in text for pattern in ['2/', '3/', '4/', '5/', 'part 2', 'part 3']):
+                    followers.append(post)
+        
+        # Sort followers by creation time
+        followers.sort(key=lambda p: p.record.created_at)
+        return followers
+    
+    def create_combined_thread_post(self, starter_post, follower_posts):
+        """Create a single post combining thread content."""
+        combined_text = getattr(starter_post.record, 'text', '')
+        
+        # Clean up thread indicators from the starter
+        combined_text = self.clean_thread_indicators(combined_text)
+        
+        # Add follower posts
+        for post in follower_posts:
+            follower_text = getattr(post.record, 'text', '')
+            follower_text = self.clean_thread_indicators(follower_text)
+            if follower_text.strip():
+                combined_text += "\n\n" + follower_text
+        
+        # Create a new post object with combined content
+        # We'll modify the original starter post
+        starter_post.record.text = combined_text
+        starter_post._is_combined_thread = True  # Mark as combined
+        
+        return starter_post
+    
+    def clean_thread_indicators(self, text):
+        """Remove common thread indicators from text."""
+        import re
+        
+        # Remove thread numbering patterns
+        patterns = [
+            r'^\d+[/|]\d*\s*',  # 1/5, 2/, etc at start
+            r'^\d+\s*of\s*\d+\s*',  # 1 of 5, etc
+            r'part\s*\d+\s*[:-]?\s*',  # part 1:, part 2, etc
+            r'🧵\s*',  # thread emoji
+            r'thread\s*[:-]?\s*',  # "thread:" or "thread"
+            r'continued\s+below\s*',
+            r'more\s+in\s+replies\s*',
+            r'👇\s*'
+        ]
+        
+        for pattern in patterns:
+            text = re.sub(pattern, '', text, flags=re.IGNORECASE)
+        
+        return text.strip()
     
     def clean_text(self, text):
         """Clean text for Jekyll markdown."""
@@ -149,7 +292,16 @@ class BlueskyFetcher:
         source_url = f"https://bsky.app/profile/{self.username}/post/{post_id}" if post_id else ""
         
         # Create front matter
-        title = processed_text[:60] + ('...' if len(processed_text) > 60 else '')
+        # For combined threads, create a more descriptive title
+        if hasattr(post, '_is_combined_thread') and post._is_combined_thread:
+            # Try to extract the main topic from the first sentence
+            first_sentence = processed_text.split('.')[0].split('\n')[0]
+            title = first_sentence[:60] + ('...' if len(first_sentence) > 60 else '')
+            if not title.strip():
+                title = "Thread: " + processed_text[:50] + ('...' if len(processed_text) > 50 else '')
+        else:
+            title = processed_text[:60] + ('...' if len(processed_text) > 60 else '')
+        
         title = title.replace('"', '\\"')  # Escape quotes in title
         
         front_matter = f"""---
