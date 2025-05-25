@@ -428,20 +428,69 @@ source_url: "{source_url}"
         
         return filename, front_matter
     
+    def get_existing_post_uris(self):
+        """Get URIs of existing Bluesky posts to avoid duplicates."""
+        ideas_dir = Path('_ideas')
+        existing_uris = set()
+        
+        if not ideas_dir.exists():
+            return existing_uris
+        
+        for file_path in ideas_dir.glob('*.md'):
+            try:
+                with open(file_path, 'r', encoding='utf-8') as f:
+                    content = f.read()
+                    
+                # Look for source_url in front matter
+                if 'source_url:' in content:
+                    for line in content.split('\n'):
+                        if line.strip().startswith('source_url:'):
+                            # Extract the URL and then the post ID
+                            url = line.split(':', 1)[1].strip().strip('"')
+                            if '/post/' in url:
+                                post_id = url.split('/post/')[-1]
+                                # Reconstruct the URI format that Bluesky uses
+                                uri_ending = f"app.bsky.feed.post/{post_id}"
+                                existing_uris.add(uri_ending)
+                            break
+            except Exception as e:
+                print(f"⚠️ Error reading {file_path}: {e}")
+                
+        return existing_uris
+    
     def save_posts(self, posts):
         """Save posts as Jekyll markdown files."""
         ideas_dir = Path('_ideas')
         ideas_dir.mkdir(exist_ok=True)
         
+        # Get existing post URIs to avoid duplicates
+        existing_uris = self.get_existing_post_uris()
+        print(f"📋 Found {len(existing_uris)} existing posts")
+        
         saved_count = 0
+        skipped_count = 0
         
         for post in posts:
             try:
+                # Check if this post already exists based on URI
+                post_uri = getattr(post, 'uri', '')
+                if post_uri:
+                    # Extract the URI ending for comparison
+                    uri_parts = post_uri.split('/')
+                    if len(uri_parts) >= 2:
+                        uri_ending = f"{uri_parts[-2]}/{uri_parts[-1]}"
+                        if uri_ending in existing_uris:
+                            print(f"⏭️ Skipping existing post: {post_uri}")
+                            skipped_count += 1
+                            continue
+                
                 filename, content = self.post_to_markdown(post)
                 file_path = ideas_dir / filename
                 
-                # Don't overwrite existing files
+                # Don't overwrite existing files (additional safety check)
                 if file_path.exists():
+                    print(f"⏭️ Skipping existing file: {filename}")
+                    skipped_count += 1
                     continue
                 
                 with open(file_path, 'w', encoding='utf-8') as f:
@@ -454,7 +503,7 @@ source_url: "{source_url}"
                 print(f"❌ Failed to save post: {e}")
                 continue
         
-        print(f"💾 Saved {saved_count} new posts")
+        print(f"💾 Saved {saved_count} new posts, skipped {skipped_count} existing posts")
         return saved_count
 
 def main():
