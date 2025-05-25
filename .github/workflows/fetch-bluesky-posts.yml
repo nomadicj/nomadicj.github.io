@@ -24,7 +24,7 @@ jobs:
         
     - name: Install dependencies
       run: |
-        pip install requests python-dateutil
+        pip install requests python-dateutil atproto
         
     - name: Fetch Bluesky posts
       run: python scripts/fetch_bluesky_posts.py

@@ -6,78 +6,74 @@ Fetch Bluesky posts and convert them to Jekyll markdown files.
 import os
 import sys
 import json
-import requests
 import re
 from datetime import datetime, timezone
 from dateutil import parser as date_parser
 from pathlib import Path
 
+try:
+    from atproto import Client
+except ImportError:
+    print("❌ atproto library not installed. Run: pip install atproto")
+    sys.exit(1)
+
 class BlueskyFetcher:
     def __init__(self):
         self.username = os.getenv('BLUESKY_USERNAME')
         self.password = os.getenv('BLUESKY_PASSWORD')
-        self.base_url = 'https://bsky.social/xrpc'
-        self.session = None
-        self.did = None
+        self.client = None
         
         if not self.username or not self.password:
             print("❌ BLUESKY_USERNAME and BLUESKY_PASSWORD environment variables required")
             sys.exit(1)
     
     def authenticate(self):
-        """Authenticate with Bluesky and get session."""
+        """Authenticate with Bluesky using AT Protocol."""
         try:
-            response = requests.post(f"{self.base_url}/com.atproto.server.createSession", 
-                                   json={
-                                       'identifier': self.username,
-                                       'password': self.password
-                                   })
-            response.raise_for_status()
-            
-            data = response.json()
-            self.session = data['accessJwt']
-            self.did = data['did']
+            self.client = Client()
+            self.client.login(self.username, self.password)
             
             print(f"✅ Authenticated as {self.username}")
             return True
             
-        except requests.exceptions.RequestException as e:
+        except Exception as e:
             print(f"❌ Authentication failed: {e}")
             return False
     
     def fetch_posts(self, limit=20):
         """Fetch recent posts from Bluesky."""
-        if not self.session:
+        if not self.client:
             print("❌ Not authenticated")
             return []
         
-        headers = {'Authorization': f'Bearer {self.session}'}
-        
         try:
-            response = requests.get(
-                f"{self.base_url}/com.atproto.repo.listRecords",
-                headers=headers,
-                params={
-                    'repo': self.did,
-                    'collection': 'app.bsky.feed.post',
-                    'limit': limit,
-                    'reverse': True  # Most recent first
-                }
-            )
-            response.raise_for_status()
+            # Get the user's profile to get their DID
+            profile = self.client.get_profile(self.username)
+            did = profile.did
             
-            data = response.json()
-            posts = data.get('records', [])
+            # Fetch posts from the user's feed
+            response = self.client.get_author_feed(
+                actor=did,
+                limit=limit
+            )
+            
+            posts = []
+            for item in response.feed:
+                if hasattr(item, 'post') and item.post.author.did == did:
+                    posts.append(item.post)
             
             print(f"✅ Fetched {len(posts)} posts")
             return posts
             
-        except requests.exceptions.RequestException as e:
+        except Exception as e:
             print(f"❌ Failed to fetch posts: {e}")
             return []
     
     def clean_text(self, text):
         """Clean text for Jekyll markdown."""
+        if not text:
+            return ""
+            
         # Remove extra whitespace
         text = re.sub(r'\s+', ' ', text).strip()
         
@@ -89,26 +85,26 @@ class BlueskyFetcher:
         
         return text
     
-    def extract_links(self, text, facets=None):
-        """Extract and format links from post text."""
-        if not facets:
-            return text
+    def extract_links(self, post):
+        """Extract and format links from post."""
+        text = post.record.text
         
-        # Sort facets by byte start position in reverse order
-        sorted_facets = sorted(facets, key=lambda f: f.get('index', {}).get('byteStart', 0), reverse=True)
-        
-        for facet in sorted_facets:
-            features = facet.get('features', [])
-            index = facet.get('index', {})
-            start = index.get('byteStart', 0)
-            end = index.get('byteEnd', 0)
+        # Check for facets (rich text features like links)
+        if hasattr(post.record, 'facets') and post.record.facets:
+            # Sort facets by byte start position in reverse order
+            sorted_facets = sorted(
+                post.record.facets, 
+                key=lambda f: f.index.byte_start, 
+                reverse=True
+            )
             
-            for feature in features:
-                if feature.get('$type') == 'app.bsky.richtext.facet#link':
-                    uri = feature.get('uri', '')
-                    if uri:
+            for facet in sorted_facets:
+                for feature in facet.features:
+                    if hasattr(feature, 'uri'):  # It's a link
+                        start = facet.index.byte_start
+                        end = facet.index.byte_end
                         link_text = text[start:end]
-                        markdown_link = f"[{link_text}]({uri})"
+                        markdown_link = f"[{link_text}]({feature.uri})"
                         text = text[:start] + markdown_link + text[end:]
                         break
         
@@ -116,14 +112,17 @@ class BlueskyFetcher:
     
     def post_to_markdown(self, post):
         """Convert a Bluesky post to Jekyll markdown."""
-        record = post.get('value', {})
-        created_at = record.get('createdAt', '')
-        text = record.get('text', '')
-        facets = record.get('facets', [])
+        # Extract post data
+        created_at = post.record.created_at
+        text = getattr(post.record, 'text', '')
         
         # Parse date
         try:
-            post_date = date_parser.isoparse(created_at)
+            if isinstance(created_at, str):
+                post_date = date_parser.isoparse(created_at)
+            else:
+                post_date = created_at
+            
             date_str = post_date.strftime('%Y-%m-%d')
             datetime_str = post_date.strftime('%Y-%m-%d %H:%M:%S %z')
         except:
@@ -132,7 +131,8 @@ class BlueskyFetcher:
         
         # Clean and process text
         clean_text = self.clean_text(text)
-        processed_text = self.extract_links(clean_text, facets)
+        processed_text = self.extract_links(post)
+        processed_text = self.clean_text(processed_text)
         
         # Create slug from text (first 50 chars, alphanumeric only)
         slug_text = re.sub(r'[^a-zA-Z0-9\s]', '', text[:50])
@@ -143,15 +143,23 @@ class BlueskyFetcher:
         # Create filename
         filename = f"{date_str}-{slug}.md"
         
+        # Get post URI for linking back to Bluesky
+        post_uri = post.uri if hasattr(post, 'uri') else ''
+        post_id = post_uri.split('/')[-1] if post_uri else ''
+        source_url = f"https://bsky.app/profile/{self.username}/post/{post_id}" if post_id else ""
+        
         # Create front matter
+        title = processed_text[:60] + ('...' if len(processed_text) > 60 else '')
+        title = title.replace('"', '\\"')  # Escape quotes in title
+        
         front_matter = f"""---
 layout: post
-title: "{processed_text[:60]}{'...' if len(processed_text) > 60 else ''}"
+title: "{title}"
 date: {datetime_str}
 categories: [ideas, bluesky]
 tags: [thoughts, bluesky]
 bluesky_post: true
-source_url: "https://bsky.app/profile/{self.username}/post/{post.get('uri', '').split('/')[-1] if post.get('uri') else ''}"
+source_url: "{source_url}"
 ---
 
 {processed_text}
@@ -183,6 +191,7 @@ source_url: "https://bsky.app/profile/{self.username}/post/{post.get('uri', '').
                 
             except Exception as e:
                 print(f"❌ Failed to save post: {e}")
+                continue
         
         print(f"💾 Saved {saved_count} new posts")
         return saved_count
