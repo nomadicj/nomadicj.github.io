@@ -74,13 +74,80 @@ class BlueskyFetcher:
             print(f"❌ Failed to fetch posts: {e}")
             return []
     
+    def remove_duplicates(self, posts):
+        """Remove duplicate posts based on content similarity and timing."""
+        unique_posts = []
+        seen_content = set()
+        
+        # Sort posts by creation time
+        sorted_posts = sorted(posts, key=lambda p: p.record.created_at)
+        
+        for post in sorted_posts:
+            text = getattr(post.record, 'text', '').strip()
+            
+            # Create a normalized version for comparison
+            normalized_text = self.normalize_text_for_comparison(text)
+            
+            # Check for exact duplicates
+            if normalized_text in seen_content:
+                print(f"🗑️ Removing duplicate post: {text[:50]}...")
+                continue
+            
+            # Check for substantial overlap with recent posts
+            is_duplicate = False
+            for existing_text in seen_content:
+                if self.texts_are_similar(normalized_text, existing_text):
+                    print(f"🗑️ Removing similar post: {text[:50]}...")
+                    is_duplicate = True
+                    break
+            
+            if not is_duplicate:
+                seen_content.add(normalized_text)
+                unique_posts.append(post)
+        
+        return unique_posts
+    
+    def normalize_text_for_comparison(self, text):
+        """Normalize text for duplicate detection."""
+        import re
+        # Remove extra whitespace, convert to lowercase
+        normalized = re.sub(r'\s+', ' ', text.lower().strip())
+        # Remove common thread indicators for comparison
+        normalized = self.clean_thread_indicators(normalized)
+        return normalized
+    
+    def texts_are_similar(self, text1, text2, threshold=0.8):
+        """Check if two texts are substantially similar."""
+        if not text1 or not text2:
+            return False
+        
+        # Simple similarity check based on common words
+        words1 = set(text1.split())
+        words2 = set(text2.split())
+        
+        if len(words1) == 0 or len(words2) == 0:
+            return False
+        
+        # Calculate Jaccard similarity
+        intersection = len(words1.intersection(words2))
+        union = len(words1.union(words2))
+        
+        similarity = intersection / union if union > 0 else 0
+        return similarity >= threshold
+    
     def combine_threads(self, posts):
         """Combine threaded posts into single coherent posts."""
         thread_map = {}
         standalone_posts = []
+        processed_posts = set()  # Track which posts we've already processed
+        
+        # First pass: Remove duplicate posts
+        posts = self.remove_duplicates(posts)
         
         # Build thread relationships
         for post in posts:
+            if post.uri in processed_posts:
+                continue
             post_text = getattr(post.record, 'text', '')
             
             # Check if this is a reply to another post
@@ -113,16 +180,16 @@ class BlueskyFetcher:
                         # Create a combined thread post
                         combined_post = self.create_combined_thread_post(post, thread_followers)
                         standalone_posts.append(combined_post)
-                        # Remove followers from further processing
+                        # Mark all thread posts as processed
+                        processed_posts.add(post.uri)
                         for follower in thread_followers:
-                            if follower in posts:
-                                posts.remove(follower)
+                            processed_posts.add(follower.uri)
                     else:
                         standalone_posts.append(post)
                 else:
-                    # Check if this is already processed as part of a thread
-                    if not any(post in followers for followers in thread_map.values()):
-                        standalone_posts.append(post)
+                    # This is a standalone post
+                    standalone_posts.append(post)
+                    processed_posts.add(post.uri)
         
         # Process thread_map to create combined posts
         for parent_uri, replies in thread_map.items():
