@@ -74,8 +74,12 @@ body {
   color: var(--text-color);
 }
 
-.navigation {
-  background-color: var(--nav-bg);
+/* Exclude navigation buttons from dark mode background changes */
+.navigation,
+.navigation__item,
+.navigation__item a,
+.cover-navigation {
+  background-color: initial !important;
 }
 
 .post-list__post-title a,
