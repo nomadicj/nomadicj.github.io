@@ -16,13 +16,13 @@ Seasoned SaaS Engineering Leader with a reputation for building high performing 
 November 2024 - Present
 Vancouver, Canada & Boston, USA
 
-Leading engineering teams focused on HubSpot's core platform and service offerings.
+Leading engineering teams within the CommerceHub focussed on CPQ.
 
 ### Cacheflow (acquired by HubSpot) | Head of Engineering 
 November 2023 - November 2024
 Vancouver, Canada & San Francisco, USA
 
-Led the engineering organization for Cacheflow, a fintech startup building a Quote-to-Cash platform for B2B SaaS companies.
+Supported Co-founding CTO with engineering leadership for Cacheflow, a fintech startup building a Quote-to-Cash platform for B2B SaaS companies, driving the technical foundation through to successful acquisition by HubSpot.
 
 ### Armstrong Engineering
 August 2023 - November 2023
@@ -43,40 +43,16 @@ Leading Engineering for MediaValet. Supporting 40% year-on-year revenue growth d
 January 2020 – February 2022
 Vancouver, Canada
 
-Leading the distributed Platform Engineering group (~120 people), comprising Uplight’s core data platform. Inclusive of the API strategy across all products, core services such as auth, comms and event sourced SOX auditable financial services alongside the data lake and ingest for over 60,000,000 energy user accounts, data science capability, eCommerce platform handling over $70,000,000 annual sales and world leading IoT platform creating the next gen Virtual Power Plant. Active participant in leading engineering conversations and architectural direction setting through technical coaching and mentorship.
-
-* Led the surge effort (currently in progress) to drive a 50% YoY revenue growth that includes 100+ engineering headcount.
-* Led the technical integration of 6 original company tech stacks across Platform Engineerings 20 teams with 4 directors and 4 architects.
-* Redesigned the Org structure to drive a more Platform & Application centric approach to development including starting the engineering based Technical Program Management approach to augment the existing Agile capability to drive wider planning initiatives.
-* Instituted an architectural group with the dual aims of driving a higher and broader level of thinking across the engineering organisation as a whole and of bringing the tooling and delivery approach of what was previously six organisations together as one.
-* Driven changes in recruitment and budgeting approaches to bring accountability to the engineering group and reduce inefficiencies inherent in abstracted and distributed ownership.
-* Personally led client engagements and incident response, defining new approaches to RCA and communication where needed.
-* Taken an key part of the whole product life, challenging Product GMs to think wider and longer term and been a strong active participant in the commercial aspects of the go-to-market strategies.
-* Supported, grown, coached and championed colleagues wherever possible across the organisation.
+Led distributed Platform Engineering (~120 people) managing core data platform for 60M+ energy accounts and $70M+ annual eCommerce sales. Drove 50% YoY revenue growth, integrated 6 company tech stacks across 20 teams, and established Technical Program Management practices. Key focus areas: API strategy, SOX-compliant financial services, data lake architecture, IoT Virtual Power Plant, and technical coaching.
 
 ### Contino | Principal Consultant
 January 2018 - December 2019
 London UK
 
-Leading technical engagements to deliver high value engineering change to legacy client engineering groups with clients such as:
-#### Nationwide Building Society, UK
-Leading a team implementing the Contino portion of the “Confirmation of Payee” Open Banking standard for Nationwide. Consisting of an AWS migration of core and PCI compliant banking services. Responsible for creating operating model, defining team structure within the Agile model, supporting Nationwide architectural and tooling decisions required to ensure the best possible product onboarding and maintainability.
-#### IRESS, UK & Australia
-Acted as ‘shadow CTO’ to support major global cloud migration initiative for global financial software house IRESS. Advised and supported leadership in all aspects of delivery from core tooling and AWS architecture to Go To Market strategy. Technical leadership of global engagement (UK/Aus time zones)
-#### Allianz, UK
-Worked with Allianz UK to deliver the new platform that is the core of all online interaction with Allianz UK today. Involved greenfield implementation of an IdP (Auth0, including writing new Ansible/Python configuration modules), Java Microservice & Angular front end, IaC for all AWS Services (API GW, Elastic Search, CloudFront, RDS, etc), as well as remediating core data sources to create AuthN and AuthZ data.
+Led high-value cloud transformation engagements for enterprise clients including Nationwide Building Society (Open Banking/PCI compliance), IRESS (global AWS migration), and Allianz UK (greenfield platform with Auth0, Java microservices, Angular). Focused on AWS architecture, DevOps implementation, and technical leadership across global teams.
 
 ### Vision Critical | Director & Sr Director, Core Engineering & TechOps
 May 2013 - Jan 2018
 Vancouver, Canada
 
-Built, grew and led the agile based Core Engineering, Systems Engineering and Infrastructure teams (~30 people, $5m USD budget) at Market Research SaaS firm Vision Critical. Created the hybrid infrastructure strategy for Product and Development environments, drove the focus and discipline of the technical operation, defined goals and strategy around the use of automation to facilitate scale growth, positively disrupted and supported product architecture/development. Directly responsible to the C-Suite for financial, reliability, security, development velocity and contractual aspects of the group.
-
-* Rationalisation, cost reduction and efficiency drive across all aspects of the VC production infrastructure resulting in 50% delivery cost reduction
-* Architected and lead the full product migration of all VC apps to AWS
-* Implemented full Config Management (Chef) & Infrastructure as Code (CloudFormation/Terraform/Consul/Vault) bootstrapped approach
-* Driving full stack automation from service discovery that drives load balancers and monitoring to delivery of full stack restful APIs to manage all aspects of client provisioning (Product, SSL, DNS, Mail, etc)
-* Completely overhauled logging (ELK), metrics (StatsD, Graphite, Grafana) and alerting systems (Nagios, Icinga, PagerDuty) to deliver centralised operational awareness for the whole engineering group from CTO to developer
-* “Own” technology budget for everything from Production AWS account to Oracle licensing and in doing so established first real infrastructure cost model for Vision Critical
-* Established Application Operations/Site Reliability team at Vision Critical
-* Drove the DevOps CI/CD approach to in delivery into AWS that lead to both more reliable deployments and better DR preparedness
+Built and led Core Engineering, Systems Engineering and Infrastructure teams (~30 people, $5M budget) at Market Research SaaS. Delivered 50% cost reduction, complete AWS migration, and full-stack automation using Chef, Terraform, ELK, and CI/CD practices. Established SRE team and infrastructure cost modeling.
