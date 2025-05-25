@@ -1,6 +1,6 @@
 ---
 title: "Buyer Beware | Part 1: Operations Assessment"
-date: 2022-10-25 11:00:00
+date: 2023-10-25 11:00:00
 categories: [m&a considerations]
 tags: [m&a, operations, infrastructure, devops, security]
 series: "buyer-beware-ma"
@@ -9,7 +9,7 @@ updated: 2025-05-24
 update_note: "Completed incomplete sections and improved structure"
 ---
 
-*This is Part 1 of the [Buyer Beware M&A Series](/2022/buyer-beware-ma-series-index/). See the [complete series index](/2022/buyer-beware-ma-series-index/) for all parts.*
+*This is Part 1 of the [Buyer Beware M&A Series](/2023/Buyer-Beware-M&A-Series-Index/). See the [complete series index](/2023/Buyer-Beware-M&A-Series-Index/) for all parts.*
 
 ## Operations Assessment Framework
 
@@ -227,8 +227,8 @@ Key takeaways for your operational assessment:
 4. **Risk management**: Understand and plan for operational risks before they become problems
 5. **Integration complexity**: Factor operational differences into your acquisition timeline and budget
 
-**Next in Series**: [Part 2: People and Culture Assessment](/2022/buyer-beware-people/) covers team composition, cultural alignment, and retention strategies.
+**Next in Series**: [Part 2: People and Culture Assessment](/2023/Buyer-Beware-Considerations-when-weighing-and-M&A-opportunity-People/) covers team composition, cultural alignment, and retention strategies.
 
 ---
 
-*Return to [Buyer Beware Series Index](/2022/buyer-beware-ma-series-index/)*
+*Return to [Buyer Beware Series Index](/2023/Buyer-Beware-M&A-Series-Index/)*

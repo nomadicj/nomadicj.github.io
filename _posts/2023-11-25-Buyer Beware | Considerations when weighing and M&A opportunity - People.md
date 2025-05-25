@@ -1,6 +1,6 @@
 ---
 title: "Buyer Beware | Part 2: People and Culture Assessment"
-date: 2022-11-25 12:00:00
+date: 2023-11-25 12:00:00
 categories: [m&a considerations]
 tags: [m&a, people, culture, team assessment, retention]
 series: "buyer-beware-ma"
@@ -9,7 +9,7 @@ updated: 2025-05-24
 update_note: "Completed incomplete sections and expanded practical guidance"
 ---
 
-*This is Part 2 of the [Buyer Beware M&A Series](/2022/buyer-beware-ma-series-index/). See the [complete series index](/2022/buyer-beware-ma-series-index/) for all parts.*
+*This is Part 2 of the [Buyer Beware M&A Series](/2023/Buyer-Beware-M&A-Series-Index/). See the [complete series index](/2023/Buyer-Beware-M&A-Series-Index/) for all parts.*
 
 ## People and Culture Assessment Framework
 
@@ -312,8 +312,8 @@ Key principles for people assessment:
 
 The most successful acquisitions invest as much effort in people integration as they do in technical integration. The teams you acquire today will determine your innovation capacity tomorrow.
 
-**Next in Series**: Part 3: Technology and Architecture Assessment *(Coming Soon)*
+**Next in Series**: [Part 3: Technology and Architecture Assessment](/2023/Buyer-Beware-Technology-Architecture/)
 
 ---
 
-*Previous: [Part 1: Operations Assessment](/2022/buyer-beware-operations/) | Return to [Series Index](/2022/buyer-beware-ma-series-index/)*
+*Previous: [Part 1: Operations Assessment](/2023/Buyer-Beware-Considerations-when-weighing-and-M&A-opportunity-Operations/) | Return to [Series Index](/2023/Buyer-Beware-M&A-Series-Index/)*

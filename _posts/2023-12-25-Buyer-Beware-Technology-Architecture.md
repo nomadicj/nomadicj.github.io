@@ -1,13 +1,13 @@
 ---
 title: "Buyer Beware | Part 3: Technology and Architecture Assessment"
-date: 2022-12-25 12:00:00
+date: 2023-12-25 12:00:00
 categories: [m&a considerations]
 tags: [m&a, technology, architecture, technical debt, scalability]
 series: "buyer-beware-ma"
 series_part: 3
 ---
 
-*This is Part 3 of the [Buyer Beware M&A Series](/2022/Buyer-Beware-M&A-Series-Index/). See the [complete series index](/2022/Buyer-Beware-M&A-Series-Index/) for all parts.*
+*This is Part 3 of the [Buyer Beware M&A Series](/2023/Buyer-Beware-M&A-Series-Index/). See the [complete series index](/2023/Buyer-Beware-M&A-Series-Index/) for all parts.*
 
 ## Technology and Architecture Assessment Framework
 
@@ -289,4 +289,4 @@ The most successful technology acquisitions balance current value with future po
 
 ---
 
-*Previous: [Part 2: People and Culture Assessment](/2022/Buyer-Beware-Considerations-when-weighing-and-M&A-opportunity-People/) | Return to [Series Index](/2022/Buyer-Beware-M&A-Series-Index/)*
+*Previous: [Part 2: People and Culture Assessment](/2023/Buyer-Beware-Considerations-when-weighing-and-M&A-opportunity-People/) | Return to [Series Index](/2023/Buyer-Beware-M&A-Series-Index/)*
