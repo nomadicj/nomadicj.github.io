@@ -293,12 +293,14 @@ class BlueskyFetcher:
         return text.strip()
     
     def clean_text(self, text):
-        """Clean text for Jekyll markdown."""
+        """Clean and format text for Jekyll markdown."""
         if not text:
             return ""
             
-        # Remove extra whitespace
-        text = re.sub(r'\s+', ' ', text).strip()
+        # Remove extra whitespace but preserve intentional line breaks
+        text = re.sub(r'[ \t]+', ' ', text)  # Replace multiple spaces/tabs with single space
+        text = re.sub(r'\n\s*\n', '\n\n', text)  # Normalize paragraph breaks
+        text = text.strip()
         
         # Escape Jekyll liquid tags
         text = text.replace('{%', '&#123;%')
@@ -306,7 +308,56 @@ class BlueskyFetcher:
         text = text.replace('{{', '&#123;&#123;')
         text = text.replace('}}', '&#125;&#125;')
         
+        # Apply markdown formatting
+        text = self.apply_markdown_formatting(text)
+        
         return text
+    
+    def apply_markdown_formatting(self, text):
+        """Apply markdown formatting to make text more readable."""
+        import re
+        
+        # Convert bullet-like patterns to proper markdown lists
+        # Handle dashes at start of lines
+        text = re.sub(r'^- ', '- ', text, flags=re.MULTILINE)
+        text = re.sub(r'^-- ', '  - ', text, flags=re.MULTILINE)  # Sub-bullets
+        text = re.sub(r'^--- ', '    - ', text, flags=re.MULTILINE)  # Sub-sub-bullets
+        
+        # Handle simple numbered lists
+        text = re.sub(r'^(\d+)\. ', r'\1. ', text, flags=re.MULTILINE)
+        
+        # Convert emphasis patterns
+        # **bold** for words in ALL CAPS (but not URLs or abbreviations)
+        text = re.sub(r'\b([A-Z]{3,})\b(?![./])', r'**\1**', text)
+        
+        # *italic* for words surrounded by underscores or emphasis
+        text = re.sub(r'_([^_\s][^_]*[^_\s])_', r'*\1*', text)
+        
+        # Code formatting for technical terms
+        # Look for common technical patterns
+        technical_patterns = [
+            r'\b(HTTP[S]?|API|JSON|XML|SQL|CSS|HTML|JavaScript|Python|Ruby|Git|CI/CD|DevOps)\b',
+            r'\b[a-z]+\.[a-z]+\.[a-z]+\b',  # package.module.function
+            r'\b[A-Z][a-zA-Z]*Exception\b',  # Exception names
+            r'\b[a-z]+_[a-z]+\b',  # snake_case
+            r'\bcamelCase[A-Z][a-zA-Z]*\b'  # camelCase
+        ]
+        
+        for pattern in technical_patterns:
+            text = re.sub(pattern, r'`\g<0>`', text)
+        
+        # Handle percentage and numbers with units
+        text = re.sub(r'\b(\d+)%\b', r'**\1%**', text)
+        text = re.sub(r'\b(\d+:\d+)\b', r'**\1**', text)  # Ratios like 60:30:10
+        
+        # Ensure proper spacing around lists
+        text = re.sub(r'\n([-*+]|\d+\.)', r'\n\n\1', text)
+        text = re.sub(r'([-*+]|\d+\.)[^\n]*\n(?!\n|[-*+]|\d+\.)', r'\g<0>\n', text)
+        
+        # Clean up excessive newlines
+        text = re.sub(r'\n{3,}', '\n\n', text)
+        
+        return text.strip()
     
     def extract_links(self, post):
         """Extract and format links from post."""
