@@ -114,6 +114,28 @@ body {
   background-color: var(--highlight-bg);
 }
 
+/* Dark mode table styling */
+[data-theme="dark"] table {
+  background-color: var(--content-bg);
+  color: var(--text-color);
+}
+
+[data-theme="dark"] th,
+[data-theme="dark"] td {
+  background-color: var(--content-bg) !important;
+  color: var(--text-color);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] tr:nth-child(even),
+[data-theme="dark"] tr:nth-child(odd) {
+  background-color: var(--content-bg) !important;
+}
+
+[data-theme="dark"] tr:hover {
+  background-color: var(--code-bg) !important;
+}
+
 /* Dark mode specific improvements */
 [data-theme="dark"] .post-list__divider {
   border-color: var(--border-color);
