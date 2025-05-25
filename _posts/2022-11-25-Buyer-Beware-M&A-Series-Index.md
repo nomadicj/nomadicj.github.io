@@ -1,6 +1,6 @@
 ---
 title: "Buyer Beware | The Complete M&A Due Diligence Guide for Engineering Leaders"
-date: 2022-11-25 10:00:00
+date: 2022-09-25 10:00:00
 categories: [m&a considerations]
 tags: [m&a, due diligence, engineering leadership, acquisition, merger]
 series: "buyer-beware-ma"
@@ -23,7 +23,7 @@ Failed acquisitions often stem from overlooked operational, cultural, or structu
 
 This guide is organized into focused articles covering each critical evaluation area:
 
-### [Part 1: Operations Assessment](/2022/buyer-beware-operations/)
+### [Part 1: Operations Assessment](/2022/Buyer-Beware-Considerations-when-weighing-and-M&A-opportunity-Operations/)
 **Essential operational capabilities and infrastructure maturity**
 - Infrastructure and cloud architecture evaluation
 - Development operations and CI/CD maturity
@@ -31,7 +31,7 @@ This guide is organized into focused articles covering each critical evaluation 
 - Cost structure and operational efficiency
 - Data literacy and monitoring capabilities
 
-### [Part 2: People and Culture](/2022/buyer-beware-people/)
+### [Part 2: People and Culture](/2022/Buyer-Beware-Considerations-when-weighing-and-M&A-opportunity-People/)
 **Team composition, culture fit, and retention strategies**
 - Team composition and skill assessment
 - Cultural alignment and integration challenges
@@ -39,7 +39,7 @@ This guide is organized into focused articles covering each critical evaluation 
 - Retention risks and mitigation strategies
 - Leadership transition planning
 
-### [Part 3: Technology and Architecture](/2022/buyer-beware-technology/) *(Coming Soon)*
+### [Part 3: Technology and Architecture](#) *(Coming Soon)*
 **Technical debt, scalability, and architectural decisions**
 - Code quality and technical debt assessment
 - Architecture scalability and modernization needs
@@ -47,7 +47,7 @@ This guide is organized into focused articles covering each critical evaluation 
 - Integration complexity and timeline estimation
 - Innovation capacity and development velocity
 
-### [Part 4: Business Integration](/2022/buyer-beware-integration/) *(Coming Soon)*
+### [Part 4: Business Integration](#) *(Coming Soon)*
 **Post-acquisition integration planning and execution**
 - Integration timeline and milestone planning
 - Customer and product portfolio alignment
@@ -74,4 +74,4 @@ Thank you to colleagues past and present who have contributed insights, war stor
 
 ---
 
-**Next**: Start with [Part 1: Operations Assessment](/2022/buyer-beware-operations/) to evaluate the operational maturity and infrastructure capabilities of your acquisition target.
+**Next**: Start with [Part 1: Operations Assessment](/2022/Buyer-Beware-Considerations-when-weighing-and-M&A-opportunity-Operations/) to evaluate the operational maturity and infrastructure capabilities of your acquisition target.

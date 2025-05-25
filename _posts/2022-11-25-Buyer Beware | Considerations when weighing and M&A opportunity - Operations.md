@@ -1,6 +1,6 @@
 ---
 title: "Buyer Beware | Part 1: Operations Assessment"
-date: 2022-11-25 11:00:00
+date: 2022-10-25 11:00:00
 categories: [m&a considerations]
 tags: [m&a, operations, infrastructure, devops, security]
 series: "buyer-beware-ma"
