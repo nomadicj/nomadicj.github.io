@@ -16,7 +16,7 @@ Seasoned SaaS Engineering Leader with a reputation for building high performing 
 November 2024 - Present
 Vancouver, Canada & Boston, USA
 
-Leading engineering teams within the CommerceHub focussed on CPQ.
+Leading engineering teams within the CommerceHub focused on CPQ and quote-to-cash solutions.
 
 ### Cacheflow (acquired by HubSpot) | Head of Engineering 
 November 2023 - November 2024
@@ -27,7 +27,8 @@ Supported Co-founding CTO with engineering leadership for Cacheflow, a fintech s
 ### Armstrong Engineering
 August 2023 - November 2023
 Vancouver, Canada
-Engaging if fractional engineering leadership and data development support for various clients. Work such as:
+
+Provided fractional engineering leadership and data development consulting for various clients including:
 - MediaValet SDK [GitHub](https://github.com/armstro-ca/mvsdk)/[PyPi](https://pypi.org/project/mvsdk/)
 - MediaValet CLI [GitHub](https://github.com/armstro-ca/mvdam)
 - [Coffee Roaster Analysis](/roasters.html)
@@ -37,7 +38,7 @@ Engaging if fractional engineering leadership and data development support for v
 April 2022 - July 2023
 Vancouver, Canada
 
-Leading Engineering for MediaValet. Supporting 40% year-on-year revenue growth delivering global Digital Asset Management platform supporting 650+ organisations store, interact with and distribute their digital assets.
+Led Engineering for MediaValet, supporting 40% year-on-year revenue growth through delivery of global Digital Asset Management platform serving 650+ organizations for digital asset storage, interaction, and distribution.
 
 ### Uplight | Vice President and Director of Engineering
 January 2020 – February 2022
