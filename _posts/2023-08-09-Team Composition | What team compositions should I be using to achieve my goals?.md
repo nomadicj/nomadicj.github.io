@@ -24,6 +24,11 @@ Occasionally you need a team to go and take on a defined task. Get a project don
 More typically you will want a team that owns between one and three services, depending on the size, complexity and age of those services. This team will own a service performing all new feature development, maintenance and operational overhead of the services they have in their purview. 
 #### Composition (Total 6 - 10 members)
 - Senior to Staff level tech lead to support others in their break down of work and to pre-digest the challenges around the challenge
+- 2-3 Senior engineers who can mentor others and handle complex technical decisions
+- 2-4 Mid-level engineers who can work independently on most tasks
+- 1-2 Junior engineers who bring fresh perspectives while learning from the team
+- 1 Product Manager or Product Owner to define priorities and requirements
+- Optional: 1 Designer (shared across multiple teams) for user-facing features
 #### Work Style
 - Scrum
 #### Pros
