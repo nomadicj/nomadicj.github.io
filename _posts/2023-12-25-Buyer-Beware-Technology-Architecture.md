@@ -7,7 +7,7 @@ series: "buyer-beware-ma"
 series_part: 3
 ---
 
-*This is Part 3 of the [Buyer Beware M&A Series](/2023/Buyer-Beware-M&A-Series-Index/). See the [complete series index](/2023/Buyer-Beware-M&A-Series-Index/) for all parts.*
+*This is Part 3 of the [Buyer Beware M&A Series](/2023/Buyer-Beware-M&A-Series-Index/).*
 
 ## Technology and Architecture Assessment Framework
 

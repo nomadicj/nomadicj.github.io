@@ -9,7 +9,7 @@ updated: 2025-05-24
 update_note: "Completed incomplete sections and expanded practical guidance"
 ---
 
-*This is Part 2 of the [Buyer Beware M&A Series](/2023/Buyer-Beware-M&A-Series-Index/). See the [complete series index](/2023/Buyer-Beware-M&A-Series-Index/) for all parts.*
+*This is Part 2 of the [Buyer Beware M&A Series](/2023/Buyer-Beware-M&A-Series-Index/).*
 
 ## People and Culture Assessment Framework
 
