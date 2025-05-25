@@ -8,14 +8,15 @@ google_analytics: 'G-H8H411F9KG'
 
 # SEO settings
 logo: /images/profile.jpg
+image: /images/cover.jpg
 social:
   name: James Armstrong
   links:
     - https://github.com/nomadicj
     - https://www.linkedin.com/in/jnarmstrong
-twitter:
-  username: nomadicj
-  card: summary
+    - https://bsky.app/profile/armstro.bsky.social
+bluesky:
+  username: armstro.bsky.social
 
 author:
   name: 'James Armstrong'

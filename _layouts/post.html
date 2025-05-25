@@ -49,6 +49,33 @@ layout: default
     {{ content }}
   </section>
   
+  {% assign related_posts = site.posts | where_exp:"post", "post.url != page.url" %}
+  {% assign related_posts = related_posts | where_exp:"post", "post.tags != empty" %}
+  {% assign related_by_tags = "" | split: "" %}
+  {% for post in related_posts %}
+    {% assign common_tags = post.tags | intersect: page.tags %}
+    {% if common_tags.size > 0 %}
+      {% assign related_by_tags = related_by_tags | push: post %}
+    {% endif %}
+  {% endfor %}
+  
+  {% if related_by_tags.size > 0 %}
+  <section class="related-posts">
+    <h3>Related Articles</h3>
+    <ul class="related-posts-list">
+      {% for post in related_by_tags limit:3 %}
+      <li class="related-post">
+        <a href="{{ post.url }}" class="related-post-link">
+          <h4 class="related-post-title">{{ post.title }}</h4>
+          <p class="related-post-excerpt">{{ post.description | default: post.excerpt | strip_html | truncate: 120 }}</p>
+          <time class="related-post-date">{{ post.date | date: "%-d %b %Y" }}</time>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
   {% if page.history and page.history.size > 0 %}
   <section class="post-history">
     <h3>Article History</h3>

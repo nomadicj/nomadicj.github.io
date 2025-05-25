@@ -1,0 +1,24 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.armstro.ca/sitemap.xml
+
+# Block access to sensitive files and directories
+Disallow: /Gemfile
+Disallow: /Gemfile.lock
+Disallow: /_site/
+Disallow: /.git/
+Disallow: /README.md
+Disallow: /screenshot.png
+
+# Allow access to main content areas
+Allow: /2024/
+Allow: /2025/
+Allow: /images/
+Allow: /css/
+Allow: /js/
+Allow: /feed.xml
+
+# Crawl-delay (optional - remove if causing issues)
+# Crawl-delay: 1
