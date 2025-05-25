@@ -47,7 +47,7 @@ This guide is organized into focused articles covering each critical evaluation 
 - Integration complexity and timeline estimation
 - Innovation capacity and development velocity
 
-### [Part 4: Business Integration](#) *(Coming Soon)*
+### [Part 4: Business Integration Planning](/2024/Buyer-Beware-Business-Integration/)
 **Post-acquisition integration planning and execution**
 - Integration timeline and milestone planning
 - Customer and product portfolio alignment
@@ -74,4 +74,4 @@ Thank you to colleagues past and present who have contributed insights, war stor
 
 ---
 
-**Next**: Start with [Part 1: Operations Assessment](/2023/Buyer-Beware-Considerations-when-weighing-and-M&A-opportunity-Operations/) to evaluate the operational maturity and infrastructure capabilities of your acquisition target.
+**Complete Series**: Start with [Part 1: Operations Assessment](/2023/Buyer-Beware-Considerations-when-weighing-and-M&A-opportunity-Operations/) for a comprehensive framework covering all aspects of M&A due diligence for engineering leaders.
