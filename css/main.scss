@@ -215,3 +215,80 @@ pre.highlight code,
   width: 16px;
   height: 16px;
 }
+
+/* Ideas Feed Styling */
+.ideas-feed {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.ideas-feed h2 {
+  color: #e25440;
+  font-size: 24px;
+  margin: 40px 0 20px 0;
+  border-bottom: 2px solid #e25440;
+  padding-bottom: 10px;
+}
+
+.idea-post {
+  margin-bottom: 30px;
+  padding: 20px;
+  border: 1px solid #f0f0f0;
+  border-radius: 8px;
+  background: #fafafa;
+}
+
+.bluesky-post {
+  border-left: 4px solid #1185fe;
+  background: #f8fbff;
+}
+
+.manual-post {
+  border-left: 4px solid #e25440;
+}
+
+.idea-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: #666;
+}
+
+.bluesky-link {
+  color: #1185fe;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  padding: 4px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.bluesky-link:hover {
+  background-color: rgba(17, 133, 254, 0.1);
+}
+
+.idea-content {
+  line-height: 1.6;
+  color: #333;
+}
+
+.idea-content h3 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+}
+
+.idea-content h3 a {
+  color: #333;
+  text-decoration: none;
+}
+
+.idea-content h3 a:hover {
+  color: #e25440;
+}
+
+.idea-content p {
+  margin: 0;
+}
