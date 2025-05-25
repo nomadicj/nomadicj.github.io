@@ -210,10 +210,10 @@ pre.highlight code,
 
 /* Bluesky SVG Icon Alignment */
 .icon-social-bluesky {
-  display: inline-block;
-  vertical-align: middle;
-  width: 16px;
-  height: 16px;
+  display: block;
+  width: 1.7em;
+  height: 1.7em;
+  vertical-align: baseline;
 }
 
 /* Ideas Feed Styling */
