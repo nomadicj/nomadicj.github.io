@@ -1,36 +1,88 @@
 ---
-title:  "Splitting Hives | A great way to grow engineering organisations while maintaining culture"
+title:  "Splitting Hives | The Key Way to Grow Engineering Organizations While Maintaining Culture"
 date:   2022-11-23 21:00:00
 categories: [ops]
-tags: [dev management, culture, team growth]
+tags: [dev management, culture, team growth, engineering leadership]
+updated: 2025-05-24
+update_note: "Extensively revised for clarity, improved structure, and expanded practical guidance"
 ---
-## Nature analogies in Engineering
-Bees are amazing. Organic. Like dev teams... Go with me for a minute on this. 
 
-We have to humbled by the beauty and complexity of nature. We can learn the lessons nature has to share with us. When a hive is successful creates more food supply in the form of honey. When it does this more and more bees are created to the point where there are too many for a single hive to support them. The hive needs to split into two.
+## Nature Analogies in Engineering Leadership
 
-For a growing organisation to strive, it needs to create more tomorrow than it does today. Elsewhere I have talked about “building the machine that builds the machine” while finding efficiency is one path, this blog tackles the other path; when you need to take on more people and strive to remain as effective (or preferably more so) than before. 
+Bees are remarkable creatures, and their organizational patterns offer profound lessons for engineering leadership. When a hive becomes successful, it produces abundant honey and grows its population. Eventually, the hive reaches a critical mass where too many bees exist for a single colony to support effectively. Nature's solution? The hive splits into two thriving colonies, each carrying forward the same instincts, behaviors, and cultural knowledge.
 
-Dev teams therefore are the same as bee hives. A successful dev team creates enough business value and backlog that it needs to add more and more people. If it's making enough business impact then more developers will be added until there are too many for a happily functioning team. It's time to split it. Create a replica that understands the same rules, knows the same landscapes, the same ways of working.
-## Splitting the hive to grow
-The leadership challenge is to make sure you maintain fully functioning ~~hives~~ teams at all times while you do the split. What that means to you is going to be unique to your industry and company, but in my experience you would need the following:
-- People leadership - someone to set the new team administration up and someone can to maintain capability on the old team. Someone to keep an eye on the trains and make sure everything gets to “delivered”.
-- Tech leadership - someone to support the team’s technical decisions, to mentor the less senior developers technically and to scout out the problems around the problems.
-- Product leadership - someone to weigh the new and old backlogs, to drive focus on extracting maximum business value from all that hard development work.
+Growing engineering organizations face an identical challenge. Success creates demand for more features, more capacity, and ultimately more people. But there's a breaking point where adding more developers to a single team reduces effectiveness rather than increasing it. The solution isn't to slow growth—it's to thoughtfully split successful teams while preserving their culture and effectiveness.
 
-In different situations you may have some exceptional individuals who can serve more than one of these roles for a while to get you up and running. Embrace that and allow people the space to dabble in different areas as makes sense.
-## Spreading your existing culture
-The opportunity you have at your disposal right now is to hire individuals into opened up and new roles in the midst of the existing culture. The alternative is to hire a completely new team. Doing the latter will almost certainly create an “othered” team who see themselves as outside of the rest of the culture.
+## The Engineering Hive Split: When Success Demands Division
 
-This is an approach at your disposal. However, as someone who has coached and witnessed how tough it can be to integrate numerous cultures together, I would suggest the full integration approach. 
-## Using the expectation of growth for good
-I would encourage you to take a moment to reflect on how beautiful this situation is; your organisation is growing and  While it’s stressful and touch in the moment, being part of an organisation that is growing like this is not always the case. This is a dream growth model within which to lead engineering groups. 
+A successful development team creates enough business value and backlog that it naturally attracts more resources. If the team is delivering significant impact, leadership will add developers until the team becomes unwieldy. This is the moment to split the hive.
 
-This method of growth allows you to do the following:
-- Engineer looking for promotion? You’ve just created roles for them to grow into!
-- Missing key skills in an existing team? You’ve just created the space to pull those skills in!
-- Mis-titled/hired employee? You can use this split to allow an engineer to move into a role that better suits them.
-## Example; Creating room for successful promotion
-By setting expectations that internal growth and promotion from within is the norm, aspiring senior and staff level engineers can positively channel those ambitions to stand up for what will be the next opportunity.  There might not be room for them as it stands today, but by creating a new team for whom a tech lead role needs to exist, you can create the avenue for promotion.
+The goal isn't just to create two teams—it's to create two fully functioning teams that understand the same practices, navigate the same technical landscape, and maintain the same high standards. Done right, you get multiplicative impact. Done wrong, you get fragmentation and cultural drift.
 
-When the opportunity to create a new team arises we push them to help found the new hive, ahem, team. By presenting the new tech lead with a set of colleagues who already know the ways of working and who can already work in support of them, you set them up for success. 
+## The Three Pillars of Successful Team Splitting
+
+To maintain fully functioning teams during a split, you need coverage across three critical leadership areas:
+
+### People Leadership
+Someone must establish team administration, maintain delivery capability, and ensure nothing falls through the cracks. This person keeps the trains running and ensures work moves from "in progress" to "delivered" consistently.
+
+### Technical Leadership  
+Someone must guide technical decisions, mentor junior developers, and anticipate systemic challenges before they become blockers. This role scouts out "the problems around the problems" and maintains technical excellence.
+
+### Product Leadership
+Someone must balance competing backlogs, drive focus toward maximum business value, and ensure both teams remain aligned with strategic objectives.
+
+In some situations, exceptional individuals can serve multiple roles temporarily. Embrace this flexibility while actively working toward dedicated coverage in each area.
+
+## Preserving Culture Through Intentional Growth
+
+Your greatest opportunity lies in hiring new individuals into established cultural contexts rather than building entirely new teams from scratch. When you hire a completely new team, you almost inevitably create an "othered" group that sees itself as separate from your existing culture.
+
+While building separate teams can work, integrating cultures after the fact is significantly more challenging than growing within an existing culture from the start. The investment in cultural preservation during growth pays dividends in long-term cohesion and effectiveness.
+
+## Transforming Growth Pressure into Opportunity
+
+Take a moment to appreciate how remarkable this situation is—your organization is successful enough to demand this kind of growth. While it feels stressful in the moment, being part of an organization with this growth trajectory is a privilege many engineering leaders never experience.
+
+This method of organic growth enables several powerful opportunities:
+
+### Career Development
+**Engineer seeking promotion?** You've just created senior and leadership roles for them to grow into, complete with the support structure to ensure their success.
+
+### Skill Gap Resolution
+**Missing key capabilities in existing teams?** The split creates natural opportunities to bring in specialized skills while maintaining team balance.
+
+### Role Optimization
+**Employee in a mismatched role?** Team splits provide organic opportunities for people to move into positions that better suit their strengths and interests.
+
+## Case Study: Engineering Promotion Through Hive Splitting
+
+Consider an ambitious senior engineer ready for their first tech lead role. In a static organization, this promotion might wait months or years for the right opening. But in a growing organization practicing hive splitting, you can create this opportunity deliberately.
+
+When splitting a successful team, promote the senior engineer to tech lead of the new team. Surround them with colleagues who already understand your ways of working, technical standards, and cultural expectations. This approach sets the new leader up for success while maintaining continuity across both teams.
+
+The new tech lead gets:
+- A clear leadership opportunity with defined scope
+- Colleagues who can support them during the transition
+- Established processes and standards to build upon
+
+The organization gets:
+- Retention of ambitious talent through meaningful growth
+- Proven team dynamics replicated across multiple teams
+- Cultural continuity during rapid scaling
+
+## Making the Split: Practical Considerations
+
+**Timing**: Split when teams feel the strain of coordination overhead, not when they're already struggling with delivery.
+
+**Communication**: Be transparent about the why, when, and how of the split. Uncertainty breeds anxiety and resistance.
+
+**Continuity**: Maintain some cross-team relationships and shared practices to prevent complete divergence.
+
+**Success Metrics**: Define what success looks like for both teams post-split and track progress intentionally.
+
+## Conclusion: Growing Stronger Through Division
+
+Like bees in nature, successful engineering teams eventually outgrow their optimal size. The solution isn't to constrain growth but to embrace it through thoughtful division. By splitting hives while preserving culture, developing people, and maintaining effectiveness, you transform the challenge of scaling into a strategic advantage.
+
+The next time your team feels too big, too complex, or too slow, remember the bees. Sometimes the path to greater impact runs directly through purposeful division. Your role as a leader is to ensure that division strengthens rather than weakens the whole.
