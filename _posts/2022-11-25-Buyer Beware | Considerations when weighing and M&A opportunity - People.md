@@ -15,9 +15,6 @@ update_note: "Completed incomplete sections and expanded practical guidance"
 
 The success of software companies depends on two critical assets: the code they've written and the knowledge workers who created it. While code can be analyzed and technical debt quantified, people and culture assessment requires more nuanced evaluation. This guide provides a systematic approach to understanding the human capital you're acquiring and the cultural integration challenges you'll face.
 
-* TOC
-{:toc}
-
 ## Understanding Acquisition Motivations
 
 Your evaluation approach should align with your acquisition strategy. Different motivations require different weightings in your assessment criteria.

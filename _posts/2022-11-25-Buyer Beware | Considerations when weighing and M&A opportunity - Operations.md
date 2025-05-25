@@ -17,9 +17,6 @@ When evaluating an acquisition target, operational maturity often reveals more a
 
 This guide provides a systematic approach to evaluating the operational capabilities that will determine post-acquisition success.
 
-* TOC
-{:toc}
-
 ## Dependencies and Licensing
 
 ### Intellectual Property Audit
