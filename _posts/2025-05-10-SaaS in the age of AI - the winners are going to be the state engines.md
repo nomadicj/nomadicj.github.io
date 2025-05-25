@@ -4,7 +4,8 @@ title: "SaaS in the age of AI: the winners are going to be the state engines"
 date: 2025-05-10 12:00:00
 categories: [technology, saas, ai, strategy]
 tags: [ai, saas, data, state management, competitive advantage]
-description: "In an age of AI-driven interfaces and agentic interaction models, the companies that will thrive are those that control the core state and data that underpins everything else."
+description: "Why SaaS companies with sophisticated state engines will dominate the AI era. Learn how data modeling and domain expertise create unshakeable competitive moats when interfaces become commoditized."
+keywords: ["SaaS strategy", "AI disruption", "state engines", "data modeling", "competitive advantage", "software architecture", "domain expertise", "tech leadership"]
 history:
   - date: "2025-05-10"
     change: "Initial publication"

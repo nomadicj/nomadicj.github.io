@@ -4,7 +4,8 @@ title: "Making Big Leaps with Small Steps: A Practical Guide for the Modern Engi
 date: 2025-05-24 12:00:00
 categories: [engineering, productivity, ai, methodology]
 tags: [incremental delivery, ci/cd, ai assistance, engineering practices, feature development, agile]
-description: "The smart engineers are becoming power users of AI and modern CI/CD, delivering business impact at unprecedented speed through incremental delivery and perfect feedback loops."
+description: "Master incremental delivery with AI assistance and CI/CD automation. A practical 4-step framework for shipping faster, reducing risk, and maximizing business impact through small iterations."
+keywords: ["incremental delivery", "CI/CD", "AI assistance", "software development", "engineering productivity", "agile methodology", "DevOps", "deployment strategy"]
 history:
   - date: "2025-05-24"
     change: "Initial publication"
