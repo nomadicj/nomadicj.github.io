@@ -1,66 +1,237 @@
 ---
-title:  Buyer Beware | Considerations when weighing an M&A opportunity | Operations
-date:   2022-11-25 12:00:00
+title: "Buyer Beware | Part 1: Operations Assessment"
+date: 2022-11-25 11:00:00
 categories: [m&a considerations]
-tags: [m&a]
+tags: [m&a, operations, infrastructure, devops, security]
+series: "buyer-beware-ma"
+series_part: 1
+updated: 2025-05-24
+update_note: "Completed incomplete sections and improved structure"
 ---
-## Intro
-As an engineering leader you will occasionally be asked to take a look at a merger or acquisition opportunity. Industries and businesses have cycles of consolidation and occasionally you will find yourself asked to evaluate a Merger and/or an Acquisition. As a the technology leader in the conversation you will be required to weigh in on the engineering and product operations capability of the target company. Invariably you will focus on what we know as engineers, the code and architecture. But there is more to it than that. This series of blog posts is my guide to the other considerations, with contributions from colleagues current and past.
 
-Thank you to all who have offered opinion and input to this. Please see it as a living document and comments/PRs are always welcome.
+*This is Part 1 of the [Buyer Beware M&A Series](/2022/buyer-beware-ma-series-index/). See the [complete series index](/2022/buyer-beware-ma-series-index/) for all parts.*
 
-## Operations
+## Operations Assessment Framework
+
+When evaluating an acquisition target, operational maturity often reveals more about long-term viability than the product itself. A brilliant product built on unstable operational foundations becomes a liability, while a solid operational foundation can support rapid improvement and scaling.
+
+This guide provides a systematic approach to evaluating the operational capabilities that will determine post-acquisition success.
 
 * TOC
-  {:toc}
+{:toc}
 
-## Dependencies
+## Dependencies and Licensing
 
-### Intellectual property
-Are there any parts of the code that the subject company does not own? Have they pulled from open source packages with licenses that are restrictive and that require you to constrain usage or or even dispose of entire components within the subject product? Startups can get scrappy and scrappy can include the term "we'll deal with that problem down the road". Passing that obligation onto you can seriously change the value of the proposition.
+### Intellectual Property Audit
+Are there parts of the codebase the target company doesn't own? Startups often adopt a "move fast, deal with legal later" approach that can create significant post-acquisition complications.
 
-### Third party component usage
-Finding the balance of using third party components to deliver value to market in the quickest time possible vs owning all your own IP and having the most profitable product down the line is a fact of life for startups. 
+**Key Questions:**
+- What open source packages are in use and under what licenses?
+- Are there any GPL or other copyleft licenses that could require disclosure?
+- Has the company performed regular license audits?
+- Are there any pending IP disputes or claims?
 
-## Operating Expense
+**Red Flags:** GPL components in proprietary products, missing license documentation, or a history of "we'll deal with that later" responses to IP questions.
 
-### Cloud spend
-When considering the operating expense profile of product, one approach would be to consider the cloud expense as a function of cents spent per dollar of revenue (preferably of recurring revenue). The fundamental question to be answered is "will this ever be a profitable venture?”. Digging in on whether current inefficiencies are just a function of maturity or if the product can never be profitable is key here. Don't judge too harshly. Startups are always a balancing act. Look for backlog to address the issue for intent.
+### Third-Party Component Strategy
+Understanding the balance between build vs. buy decisions reveals both technical maturity and future cost structure.
 
-### Client support expense
-Client support can be a great sticky plaster for poor product. As with cloud expense, this isn’t a fatal issue but can be an indicator as to how mature the product offering is. Similar to Cloud spend, take a look at the ratio of CS expense to recurring revenue along with any backlog targeting efficiencies (and progress made on that backlog). Often this can be a “we’ll fix it when we have enough revenue” area that can end up being a massive millstone around a products neck as well as a sign the product really isn’t hitting the mark.
+**Evaluation Criteria:**
+- Ratio of proprietary code to third-party dependencies
+- Quality and sustainability of chosen dependencies
+- Vendor lock-in risks and migration complexity
+- License cost scaling with user growth
 
-### Professional services
-Understanding what is a product and what is a professional service with some software tooling is important. If an offering is only attractive and making sales when professional services is overlayed, you do not have a SaaS offering. Unless that is explicitly what you are buying, that’s not a show stopper, just know-what you are buying before you do and offer this for those who are pricing the value.
+**Consider:** A heavy reliance on third-party components isn't necessarily problematic, but understanding the strategic rationale and long-term cost implications is crucial.
+
+## Operating Expense Analysis
+
+### Cloud Infrastructure Costs
+Cloud spend as a percentage of revenue provides insight into both technical efficiency and business model sustainability.
+
+**Assessment Framework:**
+- **Cost per customer/user**: Does the unit economics make sense?
+- **Cost growth trajectory**: Is spending scaling linearly or exponentially with growth?
+- **Optimization efforts**: Is there a roadmap to address inefficiencies?
+- **Reserved capacity strategy**: Are they managing costs strategically?
+
+**Benchmark Questions:**
+- "What's your cloud spend as a percentage of recurring revenue?"
+- "What are your three largest cost drivers?"
+- "What optimization work is in your current backlog?"
+
+### Customer Support Overhead
+High support costs often indicate product usability issues or incomplete feature development.
+
+**Key Metrics:**
+- Support cost per customer
+- Ticket volume trends
+- Resolution time patterns
+- Escalation frequency
+
+**Red Flags:** Support costs growing faster than customer base, repetitive tickets indicating systemic issues, or lack of self-service capabilities.
+
+### Professional Services Dependency
+Understanding whether you're acquiring a product company or a services company disguised as a product company.
+
+**Critical Assessment:**
+- Revenue split between product licenses and professional services
+- Customer success rates with minimal professional services
+- Standardization of implementation processes
+- Self-service adoption rates
+
+**Warning Signs:** New customers requiring extensive professional services, custom implementations for most deals, or services revenue growing faster than product revenue.
 
 ## Operational Maturity
 
-### Agile approach
-There is no "right" approach against which a development team should be judged, but the approach a team is taking can inform you of what it would be like to work with/integrate them.
+### Development Operations (DevOps)
+Modern software delivery practices indicate both team capability and product reliability.
 
-### CICD
-A leading indicator to product maturity is a teams approach to [Continuious Integration and Continuious Delivery](~https://about.gitlab.com/topics/ci-cd/~). If a product is being deployed to production from someones laptop with, you might want to weigh that in light of the maturity expectation you have of that organisation and how the level of effort you expect to put into that codebase. 
+#### Continuous Integration/Continuous Delivery (CI/CD)
+**Maturity Indicators:**
+- Automated testing coverage and quality
+- Deployment frequency and success rates
+- Rollback capabilities and procedures
+- Environment parity (dev/staging/production)
 
-### Production Access
-Who has access to production data? The amount to which you need to care about will likely depend on what is in that dataset, but if you have PII or PHI a set of production databases that a wide variety of people have access to because no-one has gotten to locking access down yet, that's a concern. If lack of maturity is uncovered, I'd encourage you to consider why that access is required? Did they just not get around to locking down yet but it'll be simple enough to do or are there fundamental company processes that need to happen that need this level of broad indiscriminate access?
+**Questions to Ask:**
+- "How do you deploy to production?"
+- "What's your deployment frequency?"
+- "How do you handle rollbacks?"
+- "What's your automated test coverage?"
 
-### Data Literacy
-A high functioning team has a good awareness of the product and system that they are operating. They understand what good looks like, what a concerning state looks like. Ask for dashboards, for data points about the efficacy of product releases, for key indicator metrics. The ease of access and understanding with which a team can speak to data is a critical indicator of their connection with the product itself.
+#### Version Control and Code Management
+**Assessment Areas:**
+- Branch management strategy
+- Code review processes
+- Release management procedures
+- Documentation quality and coverage
 
-#### Operational Data
-At the operational layer I would ask, "How much is this all costing?", "What are the major contributors?", "What approach do you have to reservations?", "What considerations do you have for/when do you need to scale your infra to support your product?". These are all examples of data points that I would like to see a company being able to easily speak to in order to demonstrate that they have a good handle on their operation.
+### Infrastructure and Architecture
 
-#### DORA metrics
-A slightly higher layer of concern would be a specific set of metrics that are commonly accepted as indicators of engineering excellence are those recommended by the DevOps Research & Assessment annual reports. They are key indicators to help understand the characteristics of an engineering group in comparison with the rest of the industry as assessed on an annual basis by the folks at DORA. If they aren't already being tracked you can do some rough napkin math, but the availability of those metrics in their own right speaks to a level of maturity in the organisation.  
+#### Infrastructure as Code (IaC)
+**Evaluation Points:**
+- Percentage of infrastructure managed as code
+- Version control for infrastructure changes
+- Environment reproducibility
+- Disaster recovery capabilities
 
-#### Product Dashboards
-The top level of data literacy I would consider looking for would be higher order metrics around the product itself. What is an products Monthly Active User (MAU) base? What aspects of their product are end users using a lot? What quiet backwaters are there? Why are people spending so much time in those hot areas? It's entirely possible that a user base is hammering one function because something else isn't working well for them. Primarily having data to hand is a great indicator of that level of literacy and then hearing the stories that data tells your possible new colleagues is another great step. 
+**Red Flags:** Manual infrastructure management, inconsistent environments, or lack of documented procedures.
 
-### Security
-While it is unlikely that you have the time or the willing to go through a full [CIS benchmark](~https://www.cisecurity.org/~) of the target product environment, it would be good to cover a few of the basics. The bellweather questions that matter to me are:
+#### Scalability and Performance
+**Technical Assessment:**
+- Load testing practices and results
+- Monitoring and alerting systems
+- Performance optimization history
+- Capacity planning processes
 
-- What approach have you taken to/how complete is your Infrastructure as Code?
-- What approach have you taken to Disaster Recovery?
-- 
+#### Security Posture
+**Security Fundamentals:**
+- Access control and authentication systems
+- Data encryption (at rest and in transit)
+- Security incident response procedures
+- Compliance framework adherence
 
-## 
+**Critical Questions:**
+- "Who has production access and why?"
+- "How do you handle security incidents?"
+- "What compliance requirements do you meet?"
+- "When was your last security audit?"
+
+## Data Literacy and Monitoring
+
+A team's relationship with data reveals their product understanding and operational sophistication.
+
+### Operational Metrics
+**Infrastructure Monitoring:**
+- System performance metrics (CPU, memory, disk, network)
+- Application performance monitoring (APM)
+- Error rates and patterns
+- Cost allocation and tracking
+
+**Business Metrics:**
+- Customer usage patterns
+- Feature adoption rates
+- Performance impact on user experience
+- Revenue attribution to technical improvements
+
+### DORA Metrics
+The DevOps Research and Assessment (DORA) metrics provide industry-standard benchmarks for engineering effectiveness:
+
+**Core Metrics:**
+- **Deployment Frequency**: How often code is deployed to production
+- **Lead Time for Changes**: Time from code commit to production deployment
+- **Change Failure Rate**: Percentage of deployments causing production issues
+- **Time to Recovery**: How quickly the team recovers from production incidents
+
+**Assessment Approach:**
+If these metrics aren't already tracked, conduct informal assessment through interviews and observation. The absence of these metrics itself indicates maturity level.
+
+### Product Analytics
+**User Behavior Understanding:**
+- Monthly/Daily Active Users (MAU/DAU)
+- Feature utilization patterns
+- User journey analytics
+- Conversion funnel analysis
+
+**Product Development Insights:**
+- A/B testing capabilities
+- Feature flag management
+- User feedback integration
+- Data-driven decision making processes
+
+## Risk Assessment and Mitigation
+
+### Technical Debt Evaluation
+**Debt Categories:**
+- Code quality and maintainability
+- Infrastructure modernization needs
+- Security vulnerability backlogs
+- Documentation and knowledge gaps
+
+### Business Continuity Planning
+**Disaster Recovery:**
+- Recovery Time Objective (RTO) and Recovery Point Objective (RPO)
+- Backup and restore procedures
+- Geographic redundancy
+- Incident response playbooks
+
+**Operational Resilience:**
+- Single points of failure identification
+- Key person dependencies
+- Vendor relationship management
+- Compliance and audit readiness
+
+## Integration Planning Considerations
+
+### Operational Compatibility
+**Assessment Areas:**
+- Technology stack alignment
+- Deployment pipeline compatibility
+- Monitoring and alerting integration
+- Security policy alignment
+
+### Migration and Consolidation
+**Planning Factors:**
+- Timeline for operational integration
+- Cost of maintaining parallel systems
+- Risk mitigation during transition
+- Success metrics for integration
+
+## Conclusion
+
+Operational assessment requires looking beyond current functionality to understand the foundation upon which future growth will be built. A target company with solid operational practices can scale efficiently and integrate smoothly, while operational deficiencies often become expensive post-acquisition problems.
+
+Key takeaways for your operational assessment:
+
+1. **Cost structure sustainability**: Ensure unit economics support profitable growth
+2. **Operational maturity**: Look for automated, repeatable processes
+3. **Data-driven culture**: Teams that measure and optimize tend to improve continuously
+4. **Risk management**: Understand and plan for operational risks before they become problems
+5. **Integration complexity**: Factor operational differences into your acquisition timeline and budget
+
+**Next in Series**: [Part 2: People and Culture Assessment](/2022/buyer-beware-people/) covers team composition, cultural alignment, and retention strategies.
+
+---
+
+*Return to [Buyer Beware Series Index](/2022/buyer-beware-ma-series-index/)*
