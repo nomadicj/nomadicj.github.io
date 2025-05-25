@@ -238,23 +238,36 @@ class BlueskyFetcher:
         return followers
     
     def create_combined_thread_post(self, starter_post, follower_posts):
-        """Create a single post combining thread content."""
-        combined_text = getattr(starter_post.record, 'text', '')
+        """Create a thread post with structured content."""
+        # Create thread structure
+        thread_parts = []
         
-        # Clean up thread indicators from the starter
-        combined_text = self.clean_thread_indicators(combined_text)
+        # Add starter post
+        starter_text = getattr(starter_post.record, 'text', '')
+        starter_text = self.clean_thread_indicators(starter_text)
+        if starter_text.strip():
+            thread_parts.append({
+                'text': starter_text,
+                'order': 1,
+                'uri': starter_post.uri,
+                'created_at': starter_post.record.created_at
+            })
         
         # Add follower posts
-        for post in follower_posts:
+        for i, post in enumerate(follower_posts, 2):
             follower_text = getattr(post.record, 'text', '')
             follower_text = self.clean_thread_indicators(follower_text)
             if follower_text.strip():
-                combined_text += "\n\n" + follower_text
+                thread_parts.append({
+                    'text': follower_text,
+                    'order': i,
+                    'uri': post.uri,
+                    'created_at': post.record.created_at
+                })
         
-        # Create a new post object with combined content
-        # We'll modify the original starter post
-        starter_post.record.text = combined_text
-        starter_post._is_combined_thread = True  # Mark as combined
+        # Store thread structure in the post
+        starter_post._thread_parts = thread_parts
+        starter_post._is_thread = True  # Mark as thread
         
         return starter_post
     
@@ -359,19 +372,48 @@ class BlueskyFetcher:
         source_url = f"https://bsky.app/profile/{self.username}/post/{post_id}" if post_id else ""
         
         # Create front matter
-        # For combined threads, create a more descriptive title
-        if hasattr(post, '_is_combined_thread') and post._is_combined_thread:
+        # Handle threaded vs single posts differently
+        if hasattr(post, '_is_thread') and post._is_thread:
+            # This is a threaded post
+            first_part = post._thread_parts[0] if post._thread_parts else {}
+            first_text = first_part.get('text', '')
+            
             # Try to extract the main topic from the first sentence
-            first_sentence = processed_text.split('.')[0].split('\n')[0]
+            first_sentence = first_text.split('.')[0].split('\n')[0] if first_text else ''
             title = first_sentence[:60] + ('...' if len(first_sentence) > 60 else '')
             if not title.strip():
-                title = "Thread: " + processed_text[:50] + ('...' if len(processed_text) > 50 else '')
+                title = "Thread: " + first_text[:50] + ('...' if len(first_text) > 50 else '')
+            
+            title = title.replace('"', '\\"')  # Escape quotes in title
+            
+            # Create YAML for thread parts
+            thread_yaml = "thread_parts:\n"
+            for part in post._thread_parts:
+                part_text = part['text'].replace('"', '\\"').replace('\n', '\\n')
+                thread_yaml += f"""  - order: {part['order']}
+    text: "{part_text}"
+    uri: "{part['uri']}"
+"""
+            
+            front_matter = f"""---
+layout: post
+title: "{title}"
+date: {datetime_str}
+categories: [ideas, bluesky]
+tags: [thoughts, bluesky]
+bluesky_post: true
+is_thread: true
+source_url: "{source_url}"
+{thread_yaml}---
+
+<!-- Thread content is rendered from thread_parts in front matter -->
+"""
         else:
+            # Single post
             title = processed_text[:60] + ('...' if len(processed_text) > 60 else '')
-        
-        title = title.replace('"', '\\"')  # Escape quotes in title
-        
-        front_matter = f"""---
+            title = title.replace('"', '\\"')  # Escape quotes in title
+            
+            front_matter = f"""---
 layout: post
 title: "{title}"
 date: {datetime_str}

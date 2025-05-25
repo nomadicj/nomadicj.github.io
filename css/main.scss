@@ -285,3 +285,75 @@ pre.highlight code,
 .idea-content p {
   margin: 0;
 }
+
+/* Thread Styling */
+.thread-container {
+  position: relative;
+}
+
+.thread-part {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.thread-part-number {
+  background: #1185fe;
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+  margin-right: 15px;
+  flex-shrink: 0;
+  z-index: 2;
+  position: relative;
+}
+
+.thread-part-content {
+  flex: 1;
+  background: #f8fbff;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 3px solid #1185fe;
+}
+
+.thread-part-content p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.thread-connector {
+  width: 2px;
+  height: 20px;
+  background: #1185fe;
+  margin-left: 11px;
+  margin-bottom: 5px;
+  position: relative;
+  z-index: 1;
+}
+
+/* First thread part styling */
+.thread-part[data-order="1"] .thread-part-number {
+  background: #e25440;
+}
+
+.thread-part[data-order="1"] .thread-part-content {
+  border-left-color: #e25440;
+}
+
+/* Hover effects */
+.thread-part:hover .thread-part-content {
+  background: #eef7ff;
+  box-shadow: 0 2px 8px rgba(17, 133, 254, 0.1);
+}
+
+.thread-part[data-order="1"]:hover .thread-part-content {
+  background: #fdf2f1;
+  box-shadow: 0 2px 8px rgba(226, 84, 64, 0.1);
+}

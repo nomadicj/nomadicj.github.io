@@ -29,7 +29,19 @@ A collection of random thoughts, observations, and ideas from my [Bluesky feed](
         {% endif %}
       </div>
       <div class="idea-content">
-        {{ post.content }}
+        {% if post.is_thread and post.thread_parts %}
+          <div class="thread-container">
+            {% for part in post.thread_parts %}
+            <div class="thread-part" data-order="{{ part.order }}">
+              <div class="thread-part-number">{{ part.order }}</div>
+              <div class="thread-part-content">{{ part.text | markdownify }}</div>
+            </div>
+            {% unless forloop.last %}<div class="thread-connector"></div>{% endunless %}
+            {% endfor %}
+          </div>
+        {% else %}
+          {{ post.content }}
+        {% endif %}
       </div>
     </article>
     {% endfor %}
