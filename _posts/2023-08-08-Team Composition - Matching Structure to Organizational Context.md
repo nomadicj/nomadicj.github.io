@@ -1,6 +1,6 @@
 ---
 title: "Team Composition: Matching Structure to Organizational Context"
-date: 2025-05-25 12:00:00
+date: 2023-08-08 12:00:00
 categories: [organisation structure, leadership]
 tags: [team composition, organizational maturity, business value, leadership strategy]
 description: "How to choose the right team structure based on your organization's maturity, urgency needs, and business value connection requirements."

@@ -8,7 +8,7 @@ description: "A detailed breakdown of four team structures based on experience, 
 
 In my experience, there are four distinct team types that serve different organizational contexts and business needs. Each has specific characteristics that make it effective in certain situations and problematic in others. Understanding when and how to deploy these team types is crucial for maintaining the business value connection that prevents teams from becoming self-validating.
 
-*This article builds on the framework outlined in [Team Composition: Matching Structure to Organizational Context](/2025/05/25/Team-Composition-Matching-Structure-to-Organizational-Context.html). If you haven't read that piece, it provides essential context for understanding when to use these team types.*
+*This article builds on the framework outlined in [Team Composition: Matching Structure to Organizational Context](/2023/08/08/Team-Composition-Matching-Structure-to-Organizational-Context.html). If you haven't read that piece, it provides essential context for understanding when to use these team types.*
 
 ## Strike Teams - The "get it done" team
 
