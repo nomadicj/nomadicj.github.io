@@ -1,78 +1,156 @@
 ---
-title:  "Team composition - What team compositions should I be using to achieve my goals?"
-date:   2023-08-09 21:00:00
-categories: [organisation structure]
-tags: []
+title: "Four Team Types and When to Use Them"
+date: 2023-08-09 21:00:00
+categories: [organisation structure, leadership]
+tags: [team composition, strike teams, service teams, shared services, maintenance teams]
+description: "A detailed breakdown of four team structures based on experience, including when each type works best and how to maintain business value connection."
 ---
-When leading and adapting an organisation to the changing challenges backlogs present it is important to consider team composition and what impact that has on its overall approach. These are the key types you need to consider and use as tools in your leadership toolkit.
 
-## Strike Teams - The “get it done” team
-Occasionally you need a team to go and take on a defined task. Get a project done. Meet a deadline. On this team you need people who know what they are doing and, given direction, can make it happen. As such you should deploy a small team of highly skilled engineers who can hit the ground running with a minimum of fuss (trying to beat [Metcalfe’s Law](https://en.wikipedia.org/wiki/Metcalfe's_law) with both low node count and high prior experience)
+In my experience, there are four distinct team types that serve different organizational contexts and business needs. Each has specific characteristics that make it effective in certain situations and problematic in others. Understanding when and how to deploy these team types is crucial for maintaining the business value connection that prevents teams from becoming self-validating.
 
-#### Composition (Total 4 - 6 members)
+*This article builds on the framework outlined in [Team Composition: Matching Structure to Organizational Context](/2025/05/25/Team-Composition-Matching-Structure-to-Organizational-Context.html). If you haven't read that piece, it provides essential context for understanding when to use these team types.*
+
+## Strike Teams - The "get it done" team
+
+These teams emerge when you have high urgency challenges that justify organizational disruption. In my experience, they work particularly well in startup contexts or when larger organizations face existential deadlines or critical competitive opportunities.
+
+Strike teams operate on the principle that smaller, more senior teams can deliver with less oversight because they know what good looks like. They're less focused on individual growth and more interested in short-term outcomes. This approach works exceptionally well if you can find the senior talent, but it's not sustainable long-term across a larger organization.
+
+#### Composition (Total 3 - 5 members)
 - Architect level tech lead capable of setting direction for the rest of the team
-- 3-5 Senior to Staff level engineers
+- 2-4 Senior to Staff level engineers
 - An assigned individual who leads the Product and Kanban practice
+
 #### Work Style
 - [Milestone based Kanban](https://www.agilealliance.org/milestone-kanban-a-hybrid-project-scheduling-technique/)
-#### Pros
-- This team can get things done. Given a mandate and the space to deliver, amazing things can be delivered in very short periods of time.
-#### Cons
-- As individuals who are knowledgable and capable, they will likely be comfortable challenging norms and breaking rules that others can’t. They will likely be seen as being separate from the rest of your engineering team. Therefore their deployment on any given project should be reasonably short to avoid building a toxic “us and them” mentality in the overall engineering group.
 
-## Holistic Service Teams - The “own that service” team
-More typically you will want a team that owns between one and three services, depending on the size, complexity and age of those services. This team will own a service performing all new feature development, maintenance and operational overhead of the services they have in their purview. 
-#### Composition (Total 6 - 10 members)
-- Senior to Staff level tech lead to support others in their break down of work and to pre-digest the challenges around the challenge
+#### When This Works
+- High urgency situations where speed justifies disruption
+- Organizations that can absorb the temporary disruption
+- When you have access to sufficient senior talent
+- Startup environments where this is the default operating mode
+
+#### Maintaining Business Value Connection
+Strike teams tend to maintain strong business value connection naturally due to their urgency-driven formation and senior composition. The key risk is ensuring they don't become permanent, which can create the "us vs them" dynamic that damages overall organizational effectiveness.
+
+#### What to Watch For
+- Teams that resist dissolution after achieving their objective
+- Resentment from other teams who see strike teams as getting preferential treatment
+- Using strike teams as a crutch instead of building organizational capability
+
+## Holistic Service Teams - The "own that service" team
+
+These teams represent the workhorse structure for most SaaS engineering organizations in scale-up and enterprise phases. They own between one and three services, depending on size, complexity and age, performing all new feature development, maintenance and operational overhead.
+
+#### Composition (Total 5 - 8 members)
+- Senior to Staff level tech lead to support others in their breakdown of work and to pre-digest challenges
 - 2-3 Senior engineers who can mentor others and handle complex technical decisions
-- 2-4 Mid-level engineers who can work independently on most tasks
+- 2-3 Mid-level engineers who can work independently on most tasks
 - 1-2 Junior engineers who bring fresh perspectives while learning from the team
 - 1 Product Manager or Product Owner to define priorities and requirements
 - Optional: 1 Designer (shared across multiple teams) for user-facing features
+
 #### Work Style
 - Scrum
-#### Pros
-- Mixed experience allows junior members to grow in a safe and well mentored environment while seniors get the experience of mentoring and starting to lead.
-#### Cons
-- This structure is the workhorse of a SaaS engineering department. Using OKRs to keep things focussed, fresh and goal oriented is critical otherwise stagnation can occur.
 
-## Shared Services Teams - The “specialists” team
-A team of service area experts that it doesn’t make sense to have one on each of your other teams. Aggregate them into a single team and allow them to act as a supporting function on all teams while managing and maintaining a common approach and architecture for delivery of their speciality. Examples are Security, QA, DevOps/DevExp, ML, etc.
+#### When This Works
+- Scale-up phase organizations needing to balance delivery with capability building
+- When you have sustainable, ongoing work that justifies dedicated ownership
+- Organizations mature enough to support mixed-experience mentorship
+- Medium urgency situations where you can optimize for both delivery and growth
+
+#### Maintaining Business Value Connection
+These teams require active management to maintain business focus. Using OKRs to keep things focused, fresh and goal-oriented tends to work well. Without this connection, these teams can drift toward optimizing for their own comfort rather than user or business value.
+
+#### What to Watch For
+- Teams that become more interested in technical elegance than user outcomes
+- Stagnation where the team maintains the status quo without pushing for improvement
+- Knowledge silos where only certain team members understand certain components
+- Scope creep where teams take on work outside their core mission
+
+## Shared Services Teams - The "specialists" team
+
+These teams aggregate service area experts where it doesn't make sense to have one on each delivery team. They act as a supporting function across all teams while managing and maintaining a common approach and architecture for their specialty. Examples include Security, QA, DevOps/DevExp, ML, and similar functions.
+
 #### Composition (Total 3 - 8 members)
-- Architect to set the overall vision and direction for the service area. 
+- Architect to set the overall vision and direction for the service area
 - Good overall mix of contributors for the area
 - Management taking an evangelic leadership role to ensure everyone sees the value in a common approach
-#### Work Style
-- Kanban style to react to requests for support from teams while 
-#### Pros
-- Bringing the common approach together in one team facilitates others and simplifies delivery for all.
-- The one team creates a growth path for specialists. Without this there is little room for career growth, leading to undesirable departures.
-#### Cons
-- This model works by mutual consent. If teams find interactions with this team negative, they will step away from this shared services model and will try to solve their own issues.
-#### Variation
-- Consider having an association between certain members of the team and regular client teams. Allow the team to build trust in the shared service capability and the individual to build understanding of the teams domain.
 
-## Maintenance Teams - The “keep it alive” team
-Sometimes a product or group of components needs to be put into “maintenance only” mode. Essentially there is nothing new to be done in that code base and you need a group of people to run maintenance only tasks. This team is intended for that.
+#### Work Style
+- Kanban style to react to requests for support from teams
+
+#### When This Works
+- Organizations large enough to justify specialization
+- When common approaches create more value than distributed expertise
+- Functions where deep expertise is required but not constantly needed by every team
+- When you need to provide career growth paths for specialists
+
+#### Maintaining Business Value Connection
+This model works by mutual consent - if teams find interactions negative, they'll step away and solve their own problems. The business value connection comes through enabling other teams to deliver better, not through direct delivery.
+
+#### What to Watch For
+- Teams that start saying "no" more than "yes" to requests for help
+- Ivory tower syndrome where the shared service loses touch with real delivery constraints
+- Bottlenecks where the shared service becomes a constraint on other teams' delivery
+- Empire building where the shared service tries to expand its scope beyond its core value
+
+#### Variation
+Consider having an association between certain members of the team and regular client teams. This allows the team to build trust in the shared service capability while individuals build understanding of specific domains.
+
+## Maintenance Teams - The "keep it alive" team
+
+Sometimes a product or group of components needs to be put into "maintenance only" mode. There's nothing new to be done in that codebase and you need a group of people to handle maintenance-only tasks.
+
 #### Composition (Total 4 - 6 members)
-- Senior to Staff level tech lead to support others in their break down of work and to pre-digest the challenges around the challenge
-- Often the rest of the group is largely junior members who are happy to learn their tradecraft in this kind of environment. 
+- Senior to Staff level tech lead to support others in their breakdown of work and to pre-digest challenges
+- Often the rest of the group consists largely of junior members who are happy to learn their tradecraft in this kind of environment
+
 #### Work Style
 - [Scrumban](https://www.agilealliance.org/scrumban/) as the issue list dictates
-#### Pros
-- Finding the right people to take on the maintenance role can be hard but if you have knowledgeable capable people who find this kind of work rewarding, embrace them and provide them with this opportunity.
-#### Cons
-- Attrition on this kind of team can be high. Your main challenge is creating a real sense of worth and value delivery for this group of people while presenting enough challenges to ensure they are feel personal career growth. 
+
+#### When This Works
+- Legacy systems that still provide business value but don't warrant new development
+- When you have people who find maintenance work rewarding
+- Organizations that can provide clear career development paths despite the maintenance focus
+- Low urgency situations where stability is more important than innovation
+
+#### Maintaining Business Value Connection
+The challenge here is creating a real sense of worth and value delivery while ensuring team members feel personal career growth. Clear metrics around system stability, user satisfaction, and cost management can help maintain focus.
+
+#### What to Watch For
+- High attrition due to lack of growth opportunities
+- Teams that resist transitioning systems to true maintenance mode
+- Scope creep where "maintenance" becomes "stealth feature development"
+- Loss of domain knowledge as people leave
+
 #### Variation
-- If you can fold one long term support code base/product into a Holistic teams backlog instead, try and do that. It’s sometimes easier to allocate 25% of an existing teams capacity rather than build this specialised kind of group.
+If you can fold one long-term support codebase/product into a Holistic team's backlog instead, try that approach. It's sometimes easier to allocate 25% of an existing team's capacity rather than build this specialized kind of group.
 
 ## Anti-Patterns
+
 ### The group of individuals
-To have an individual who is the sole knowledgable person around a subsystem/codebase/technology is a pretty common thing around some lesser known technologies. Email Spam, IdPs and OAuth stuff, JVM optimisation, Database storage partitioning. All of these things needs to be taken care of once in a while and it’s just easier to go back to the person who did it last time, time and time again. 
+Having an individual who is the sole knowledgeable person around a subsystem/codebase/technology creates risk, but when this pattern extends across a whole team, it becomes unsustainable. You end up with a group of individuals who cannot substitute for one another.
 
-If we extrapolate that effect over a whole team, the unfortunate impact is that you end up with a group of individuals who cannot substitute for one another. The impact of any one individual taking well deserved vacation or personal leave is high and the pain of any one individuals departure from the company is far too great. A collection of individuals in this state is not healthy and unsustainable in the long term.
+The impact of any one individual taking vacation or leaving becomes disproportionately high. This isn't a team - it's a collection of single points of failure.
 
-The system needs to be seen to reward this move away from individual ownership. Cross-training, breaking down barriers to collaboration and encouragement to diversity skillsets should be both mandated and rewarded. Time needs to be made available to doing all those things and glorification of individual success related to the single owner areas should be appropriately withheld.
+**How to address this:**
+- Actively reward cross-training and knowledge sharing
+- Break down barriers to collaboration
+- Mandate time for knowledge transfer activities
+- Avoid glorifying individual heroics
+
+### The self-validating team
+Teams that lose connection to business value will find ways to justify their existence indefinitely. They become more interested in their own stability and welfare than solving real problems for users or the business.
+
+**Warning signs:**
+- Teams that can't articulate their business impact in concrete terms
+- Focus on internal metrics that don't connect to user or business outcomes
+- Resistance to measurement or accountability
+- Always having "important work" but unclear outcomes
 
 ## Summary
-Creating a team that is well suited for the work you present them with is key for their overall long term success. While the consequence of a poorly thought out team composition is negatively impactful, get this right and you’ll be able to deliver amazing things.
+
+The key insight is that team composition should be a strategic choice based on your organizational context, not a default structure you apply everywhere. Each team type serves specific situations, and the skill is in reading your context accurately and adapting accordingly.
+
+Success comes from maintaining the business value connection across all team types while choosing structures that fit your current needs and build capability for future challenges.
